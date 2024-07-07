@@ -4,31 +4,1546 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!--=============== SMALL LOGO Taskbar ===============-->
+    <link rel="shortcut icon" href="/assets/img/small icon.png" type="image/x-icon">
+
     <!--=============== FLATICON ===============-->
-    <link rel="stylesheet" href="" />
+    <link 
+      rel="stylesheet" 
+      href="https://cdn-uicons.flaticon.com/2.4.2/uicons-solid-straight/css/uicons-solid-straight.css" 
+    />
 
     <!--=============== SWIPER CSS ===============-->
-    <link rel="stylesheet" href="" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
     <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="" />
+    <link rel="stylesheet" href="/css/styles.css" />
 
     <title>Aapale Shopping</title>
   </head>
   <body>
     <!--=============== HEADER ===============-->
-    <header class="header"></header>
+    <header class="header">
+      <div class="header__top">
+        <div class="header__container container">
+          <div class="header__contact">
+            <span>(+91) 1234 5678 90</span>
+
+            <span>Our Location</span>
+          </div>
+
+          <p class="header__alert-news">
+            Super Value Deals - Save more with coupons
+          </p>
+
+          <a href="login-register.html" class="header__top-action">
+            Log in / Sign Up
+          </a>
+        </div>
+      </div>
+
+      <nav class="nav container">
+        <a href="index.html" class="nav__logo">
+          <img src="/assets/img/logo.svg" alt="" class="nav__logo-img">
+        </a>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="index.html" class="nav__link active-link">Home</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="shop.html" class="nav__link">Shop</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="accounts.html" class="nav__link">My Account</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="compare.html" class="nav__link">Compare</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="login-register.html" class="nav__link">Login</a>
+            </li>
+          </ul>
+
+          <div class="header__search">
+            <input
+              type="text"
+              placeholder="Search for items..."
+              class="form__input"
+            />
+
+            <button class="search__btn">
+              <img src="/assets/img/search.png" alt="">
+            </button>
+          </div>
+        </div>
+
+        <div class="header__user-actions">
+          <a href="wishlist.html" class="header__action-btn">
+            <img src="/assets/img/icon-heart.svg" alt="">
+            <span class="count">3</span>
+          </a>
+
+          <a href="cart.html" class="header__action-btn">
+            <img src="/assets/img/icon-cart.svg" alt="">
+            <span class="count">3</span>
+          </a>
+        </div>
+      </nav>
+    </header>
 
     <!--=============== MAIN ===============-->
     <main class="main">
       <!--=============== HOME ===============-->
-      <section class="home"></section>
+      <section class="home section--lg">
+        <div class="home__container container grid">
+          <div class="home__content">
+            <span class="home__subtitle">Hot promotions</span>
+            <h1 class="home__title">
+              DTH-Aapale Trending <span>Great Collection</span>
+            </h1>
+            <p class="home__description">
+              Save more with coupons & get up to 20% off
+            </p>
+            <a href="shop.html" class="btn">Shop Now</a>
+          </div>
+
+          <img src="/assets/img/home_img.png" alt="" class="home__img" />
+        </div>
+      </section>
 
       <!--=============== CATEGORIES ===============-->
-      <section class="categories"></section>
+      <section class="categories container section">
+        <h3 class="section__title"><span>Popular</span> Categories</h3>
+
+        <div class="categories__container swiper">
+          <div class="swiper-wrapper">
+            <a href="shop.html" class="category__item swiper-slide">
+              <img src="/assets/img/Shop (category)/Macbook Air 13 inch M3 chip Midnight Product 1.png" alt="" class="category__img">
+
+              <h3 class="category__title">Macbook Air 13 inch</h3>
+            </a>
+
+            <a href="shop.html" class="category__item swiper-slide">
+              <img src="/assets/img/Shop (category)/Macbook Pro 16-inch (M3 Max chip) Product 2.png" alt="" class="category__img">
+
+              <h3 class="category__title">Macbook Pro 16 inch</h3>
+            </a>
+
+            <a href="shop.html" class="category__item swiper-slide">
+              <img src="/assets/img/Shop (category)/imac 24 blue selection m3 chip Product 3.png" alt="" class="category__img">
+
+              <h3 class="category__title">imac</h3>
+            </a>
+
+            <a href="shop.html" class="category__item swiper-slide">
+              <img src="/assets/img/Shop (category)/Mac mini M2 Pro Product 4.png" alt="" class="category__img">
+
+              <h3 class="category__title">Mac mini</h3>
+            </a>
+
+            <a href="shop.html" class="category__item swiper-slide">
+              <img src="/assets/img/Shop (category)/Mac studio M2 Ultra Product 5.png" alt="" class="category__img">
+
+              <h3 class="category__title">Mac studio</h3>
+            </a>
+
+            <a href="shop.html" class="category__item swiper-slide">
+              <img src="/assets/img/Shop (category)/Mac Pro M2 Ultra Product 6.png" alt="" class="category__img">
+
+              <h3 class="category__title">Mac Pro</h3>
+            </a>
+
+            <a href="shop.html" class="category__item swiper-slide">
+              <img src="/assets/img/Products/Product 7/Pro display landscape.png" alt="" class="category__img">
+
+              <h3 class="category__title">Pro Display</h3>
+            </a>
+
+            <a href="shop.html" class="category__item swiper-slide">
+              <img src="/assets/img/Shop (category)/Magic Mouse Product 8.png" alt="" class="category__img">
+
+              <h3 class="category__title">Magic Mouse</h3>
+            </a>
+          </div>
+
+          <div class="swiper-button-next">
+            <i class="fi fi-ss-angle-right"></i>
+          </div>
+          <div class="swiper-button-prev">
+            <i class="fi fi-ss-angle-left"></i>
+          </div>
+        </div>
+      </section>
 
       <!--=============== PRODUCTS ===============-->
-      <section class="products"></section>
+      <section class="products section container">
+        <div class="tab__btns">
+          <span class="tab__btn active-tab">Featured</span>
+          <span class="tab__btn">Popular</span>
+          <span class="tab__btn">New added</span>
+        </div>
+
+        <div class="tab__items">
+          <div class="tab__item active-tab">
+            <div class="products__container grid">
+              <div class="product__item">
+                <div class="product__banner">
+                  <a href="details.html" class="product__images">
+                    <img src="/assets/img/Products/Product 1/Macbook Air 13 inch M3 chip Midnight.png" alt="" class="product__img default">
+
+                    <img 
+                      src="/assets/img/Products/Product 1/Macbook Air 13 inch M3 chip Midnight Front.png" 
+                      alt="" 
+                      class="product__img hover" 
+                    />
+                  </a>
+
+                  <div class="product__actions">
+                    <a href="#" class="action__btn" aria-label="Quick View">
+                      <i class="fi fi-rs-eye"></i>
+                    </a>
+
+                    <a 
+                      href="#" 
+                      class="action__btn" 
+                      aria-label="Add To Wishlist"
+                    >
+                      <i class="fi fi-rs-heart"></i>
+                    </a>
+
+                    <a href="#" class="action__btn" aria-label="Compare">
+                      <i class="fi fi-rs-shuffle"></i>
+                    </a>
+                  </div>
+
+                  <div class="product__badge light-pink">Hot</div>
+                </div>
+
+                <div class="product__content">
+                  <span class="product__category">Apple</span>
+                  <a href="details.html">
+                    <h3 class="product__title">Macbook Air 13 inch</h3>
+                  </a>
+                  <div class="product__rating">
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                  </div>
+                  <div class="product__price flex">
+                    <span class="new__price">XXX</span>
+                    <span class="old__price">XXX</span>
+                  </div>
+
+                    <a href="#" class="action__btn cart__btn" aria-label="Add To Cart">
+                    <i class="fi fi-rs-shopping-bag-add"></i>
+                    </a>
+                </div>
+              </div>
+
+              <div class="product__item">
+                <div class="product__banner">
+                  <a href="details.html" class="product__images">
+                    <img src="/assets/img/Products/Product 2/Macbook Pro 16-inch (M3 Max chip).png" alt="" class="product__img default">
+
+                    <img 
+                      src="/assets/img/Products/Product 2/Macbook Pro 16-inch (M3 Max chip) Front.png" 
+                      alt="" 
+                      class="product__img hover" 
+                    />
+                  </a>
+
+                  <div class="product__actions">
+                    <a href="#" class="action__btn" aria-label="Quick View">
+                      <i class="fi fi-rs-eye"></i>
+                    </a>
+
+                    <a 
+                      href="#" 
+                      class="action__btn" 
+                      aria-label="Add To Wishlist"
+                    >
+                      <i class="fi fi-rs-heart"></i>
+                    </a>
+
+                    <a href="#" class="action__btn" aria-label="Compare">
+                      <i class="fi fi-rs-shuffle"></i>
+                    </a>
+                  </div>
+
+                  <div class="product__badge light-green">Hot</div>
+                </div>
+
+                <div class="product__content">
+                  <span class="product__category">Mac</span>
+                  <a href="details.html">
+                    <h3 class="product__title">Macbook Pro 16-inch</h3>
+                  </a>
+                  <div class="product__rating">
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                  </div>
+                  <div class="product__price flex">
+                    <span class="new__price">XXX</span>
+                    <span class="old__price">XXX</span>
+                  </div>
+
+                    <a href="#" class="action__btn cart__btn" aria-label="Add To Cart">
+                    <i class="fi fi-rs-shopping-bag-add"></i>
+                    </a>
+                </div>
+              </div>
+
+              <div class="product__item">
+                <div class="product__banner">
+                  <a href="details.html" class="product__images">
+                    <img src="/assets/img/Products/Product 3/imac 24 blue selection m3 chip.png" alt="" class="product__img default">
+
+                    <img 
+                      src="/assets/img/Products/Product 3/imac 24 blue selection m3 chip back.png" 
+                      alt="" 
+                      class="product__img hover" 
+                    />
+                  </a>
+
+                  <div class="product__actions">
+                    <a href="#" class="action__btn" aria-label="Quick View">
+                      <i class="fi fi-rs-eye"></i>
+                    </a>
+
+                    <a 
+                      href="#" 
+                      class="action__btn" 
+                      aria-label="Add To Wishlist"
+                    >
+                      <i class="fi fi-rs-heart"></i>
+                    </a>
+
+                    <a href="#" class="action__btn" aria-label="Compare">
+                      <i class="fi fi-rs-shuffle"></i>
+                    </a>
+                  </div>
+
+                  <div class="product__badge light-orange">Hot</div>
+                </div>
+
+                <div class="product__content">
+                  <span class="product__category">Mac</span>
+                  <a href="details.html">
+                    <h3 class="product__title">Macbook Air 13 inch</h3>
+                  </a>
+                  <div class="product__rating">
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                  </div>
+                  <div class="product__price flex">
+                    <span class="new__price">XXX</span>
+                    <span class="old__price">XXX</span>
+                  </div>
+
+                    <a href="#" class="action__btn cart__btn" aria-label="Add To Cart">
+                    <i class="fi fi-rs-shopping-bag-add"></i>
+                    </a>
+                </div>
+              </div>
+
+              <div class="product__item">
+                <div class="product__banner">
+                  <a href="details.html" class="product__images">
+                    <img src="/assets/img/Products/Product 4/Mac mini M2 Pro.png" alt="" class="product__img default">
+
+                    <img 
+                      src="/assets/img/Products/Product 4/Mac mini M2 Pro Front.png" 
+                      alt="" 
+                      class="product__img hover" 
+                    />
+                  </a>
+
+                  <div class="product__actions">
+                    <a href="#" class="action__btn" aria-label="Quick View">
+                      <i class="fi fi-rs-eye"></i>
+                    </a>
+
+                    <a 
+                      href="#" 
+                      class="action__btn" 
+                      aria-label="Add To Wishlist"
+                    >
+                      <i class="fi fi-rs-heart"></i>
+                    </a>
+
+                    <a href="#" class="action__btn" aria-label="Compare">
+                      <i class="fi fi-rs-shuffle"></i>
+                    </a>
+                  </div>
+
+                  <div class="product__badge light-blue">Hot</div>
+                </div>
+
+                <div class="product__content">
+                  <span class="product__category">Mac</span>
+                  <a href="details.html">
+                    <h3 class="product__title">Macbook Air 13 inch</h3>
+                  </a>
+                  <div class="product__rating">
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                  </div>
+                  <div class="product__price flex">
+                    <span class="new__price">XXX</span>
+                    <span class="old__price">XXX</span>
+                  </div>
+
+                    <a href="#" class="action__btn cart__btn" aria-label="Add To Cart">
+                    <i class="fi fi-rs-shopping-bag-add"></i>
+                    </a>
+                </div>
+              </div>
+
+              <div class="product__item">
+                <div class="product__banner">
+                  <a href="details.html" class="product__images">
+                    <img src="/assets/img/Products/Product 5/Mac studio M2 Ultra.png" alt="" class="product__img default">
+
+                    <img 
+                      src="/assets/img/Products/Product 5/Mac studio M2 Ultra Front.png" 
+                      alt="" 
+                      class="product__img hover" 
+                    />
+                  </a>
+
+                  <div class="product__actions">
+                    <a href="#" class="action__btn" aria-label="Quick View">
+                      <i class="fi fi-rs-eye"></i>
+                    </a>
+
+                    <a 
+                      href="#" 
+                      class="action__btn" 
+                      aria-label="Add To Wishlist"
+                    >
+                      <i class="fi fi-rs-heart"></i>
+                    </a>
+
+                    <a href="#" class="action__btn" aria-label="Compare">
+                      <i class="fi fi-rs-shuffle"></i>
+                    </a>
+                  </div>
+
+                  <div class="product__badge light-pink">-30%</div>
+                </div>
+
+                <div class="product__content">
+                  <span class="product__category">Mac</span>
+                  <a href="details.html">
+                    <h3 class="product__title">Macbook Air 13 inch</h3>
+                  </a>
+                  <div class="product__rating">
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                  </div>
+                  <div class="product__price flex">
+                    <span class="new__price">XXX</span>
+                    <span class="old__price">XXX</span>
+                  </div>
+
+                    <a href="#" class="action__btn cart__btn" aria-label="Add To Cart">
+                    <i class="fi fi-rs-shopping-bag-add"></i>
+                    </a>
+                </div>
+              </div>
+
+              <div class="product__item">
+                <div class="product__banner">
+                  <a href="details.html" class="product__images">
+                    <img src="/assets/img/Products/Product 6/Mac Pro M2 Ultra.png" alt="" class="product__img default">
+
+                    <img 
+                      src="/assets/img/Products/Product 6/Mac Pro M2 Ultra Front.png" 
+                      alt="" 
+                      class="product__img hover" 
+                    />
+                  </a>
+
+                  <div class="product__actions">
+                    <a href="#" class="action__btn" aria-label="Quick View">
+                      <i class="fi fi-rs-eye"></i>
+                    </a>
+
+                    <a 
+                      href="#" 
+                      class="action__btn" 
+                      aria-label="Add To Wishlist"
+                    >
+                      <i class="fi fi-rs-heart"></i>
+                    </a>
+
+                    <a href="#" class="action__btn" aria-label="Compare">
+                      <i class="fi fi-rs-shuffle"></i>
+                    </a>
+                  </div>
+
+                  <div class="product__badge light-pink">-22%</div>
+                </div>
+
+                <div class="product__content">
+                  <span class="product__category">Mac</span>
+                  <a href="details.html">
+                    <h3 class="product__title">Macbook Air 13 inch</h3>
+                  </a>
+                  <div class="product__rating">
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                  </div>
+                  <div class="product__price flex">
+                    <span class="new__price">XXX</span>
+                    <span class="old__price">XXX</span>
+                  </div>
+
+                    <a href="#" class="action__btn cart__btn" aria-label="Add To Cart">
+                    <i class="fi fi-rs-shopping-bag-add"></i>
+                    </a>
+                </div>
+              </div>
+
+              <div class="product__item">
+                <div class="product__banner">
+                  <a href="details.html" class="product__images">
+                    <img src="/assets/img/Products/Product 7/Pro Display Front.png" alt="" class="product__img default">
+
+                    <img 
+                      src="/assets/img/Products/Product 7/Pro display back.png" 
+                      alt="" 
+                      class="product__img hover" 
+                    />
+                  </a>
+
+                  <div class="product__actions">
+                    <a href="#" class="action__btn" aria-label="Quick View">
+                      <i class="fi fi-rs-eye"></i>
+                    </a>
+
+                    <a 
+                      href="#" 
+                      class="action__btn" 
+                      aria-label="Add To Wishlist"
+                    >
+                      <i class="fi fi-rs-heart"></i>
+                    </a>
+
+                    <a href="#" class="action__btn" aria-label="Compare">
+                      <i class="fi fi-rs-shuffle"></i>
+                    </a>
+                  </div>
+
+                  <div class="product__badge light-green">Hot</div>
+                </div>
+
+                <div class="product__content">
+                  <span class="product__category">Mac</span>
+                  <a href="details.html">
+                    <h3 class="product__title">Macbook Air 13 inch</h3>
+                  </a>
+                  <div class="product__rating">
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                  </div>
+                  <div class="product__price flex">
+                    <span class="new__price">XXX</span>
+                    <span class="old__price">XXX</span>
+                  </div>
+
+                    <a href="#" class="action__btn cart__btn" aria-label="Add To Cart">
+                    <i class="fi fi-rs-shopping-bag-add"></i>
+                    </a>
+                </div>
+              </div>
+
+              <div class="product__item">
+                <div class="product__banner">
+                  <a href="details.html" class="product__images">
+                    <img src="/assets/img/Products/Product 8/Magic Mouse.png" alt="" class="product__img default">
+
+                    <img 
+                      src="/assets/img/Products/Product 8/Magic Mouse back.png" 
+                      alt="" 
+                      class="product__img hover" 
+                    />
+                  </a>
+
+                  <div class="product__actions">
+                    <a href="#" class="action__btn" aria-label="Quick View">
+                      <i class="fi fi-rs-eye"></i>
+                    </a>
+
+                    <a 
+                      href="#" 
+                      class="action__btn" 
+                      aria-label="Add To Wishlist"
+                    >
+                      <i class="fi fi-rs-heart"></i>
+                    </a>
+
+                    <a href="#" class="action__btn" aria-label="Compare">
+                      <i class="fi fi-rs-shuffle"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="product__content">
+                  <span class="product__category">Mac</span>
+                  <a href="details.html">
+                    <h3 class="product__title">Macbook Air 13 inch</h3>
+                  </a>
+                  <div class="product__rating">
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                  </div>
+                  <div class="product__price flex">
+                    <span class="new__price">XXX</span>
+                    <span class="old__price">XXX</span>
+                  </div>
+
+                    <a href="#" class="action__btn cart__btn" aria-label="Add To Cart">
+                    <i class="fi fi-rs-shopping-bag-add"></i>
+                    </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab__item">
+            <div class="products__container grid">
+              <div class="product__item">
+                <div class="product__banner">
+                  <a href="details.html" class="product__images">
+                    <img src="/assets/img/Products/Product 1/Macbook Air 13 inch M3 chip Midnight.png" alt="" class="product__img default">
+
+                    <img 
+                      src="/assets/img/Products/Product 1/Macbook Air 13 inch M3 chip Midnight Front.png" 
+                      alt="" 
+                      class="product__img hover" 
+                    />
+                  </a>
+
+                  <div class="product__actions">
+                    <a href="#" class="action__btn" aria-label="Quick View">
+                      <i class="fi fi-rs-eye"></i>
+                    </a>
+
+                    <a 
+                      href="#" 
+                      class="action__btn" 
+                      aria-label="Add To Wishlist"
+                    >
+                      <i class="fi fi-rs-heart"></i>
+                    </a>
+
+                    <a href="#" class="action__btn" aria-label="Compare">
+                      <i class="fi fi-rs-shuffle"></i>
+                    </a>
+                  </div>
+
+                  <div class="product__badge light-pink">Hot</div>
+                </div>
+
+                <div class="product__content">
+                  <span class="product__category">Mac</span>
+                  <a href="details.html">
+                    <h3 class="product__title">Macbook Air 13 inch</h3>
+                  </a>
+                  <div class="product__rating">
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                  </div>
+                  <div class="product__price flex">
+                    <span class="new__price">XXX</span>
+                    <span class="old__price">XXX</span>
+                  </div>
+
+                    <a href="#" class="action__btn cart__btn" aria-label="Add To Cart">
+                    <i class="fi fi-rs-shopping-bag-add"></i>
+                    </a>
+                </div>
+              </div>
+
+              <div class="product__item">
+                <div class="product__banner">
+                  <a href="details.html" class="product__images">
+                    <img src="/assets/img/Products/Product 2/Macbook Pro 16-inch (M3 Max chip).png">
+
+                    <img 
+                      src="/assets/img/Products/Product 2/Macbook Pro 16-inch (M3 Max chip) Front.png" 
+                      alt="" 
+                      class="product__img hover" 
+                    />
+                  </a>
+
+                  <div class="product__actions">
+                    <a href="#" class="action__btn" aria-label="Quick View">
+                      <i class="fi fi-rs-eye"></i>
+                    </a>
+
+                    <a 
+                      href="#" 
+                      class="action__btn" 
+                      aria-label="Add To Wishlist"
+                    >
+                      <i class="fi fi-rs-heart"></i>
+                    </a>
+
+                    <a href="#" class="action__btn" aria-label="Compare">
+                      <i class="fi fi-rs-shuffle"></i>
+                    </a>
+                  </div>
+
+                  <div class="product__badge light-green">Hot</div>
+                </div>
+
+                <div class="product__content">
+                  <span class="product__category">Mac</span>
+                  <a href="details.html">
+                    <h3 class="product__title">Macbook Air 13 inch</h3>
+                  </a>
+                  <div class="product__rating">
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                  </div>
+                  <div class="product__price flex">
+                    <span class="new__price">XXX</span>
+                    <span class="old__price">XXX</span>
+                  </div>
+
+                    <a href="#" class="action__btn cart__btn" aria-label="Add To Cart">
+                    <i class="fi fi-rs-shopping-bag-add"></i>
+                    </a>
+                </div>
+              </div>
+
+              <div class="product__item">
+                <div class="product__banner">
+                  <a href="details.html" class="product__images">
+                    <img src="/assets/img/Products/Product 3/imac 24 blue selection m3 chip.png" alt="" class="product__img default">
+
+                    <img 
+                      src="/assets/img/Products/Product 3/imac 24 blue selection m3 chip back.png" 
+                      alt="" 
+                      class="product__img hover" 
+                    />
+                  </a>
+
+                  <div class="product__actions">
+                    <a href="#" class="action__btn" aria-label="Quick View">
+                      <i class="fi fi-rs-eye"></i>
+                    </a>
+
+                    <a 
+                      href="#" 
+                      class="action__btn" 
+                      aria-label="Add To Wishlist"
+                    >
+                      <i class="fi fi-rs-heart"></i>
+                    </a>
+
+                    <a href="#" class="action__btn" aria-label="Compare">
+                      <i class="fi fi-rs-shuffle"></i>
+                    </a>
+                  </div>
+
+                  <div class="product__badge light-orange">Hot</div>
+                </div>
+
+                <div class="product__content">
+                  <span class="product__category">Mac</span>
+                  <a href="details.html">
+                    <h3 class="product__title">Macbook Air 13 inch</h3>
+                  </a>
+                  <div class="product__rating">
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                  </div>
+                  <div class="product__price flex">
+                    <span class="new__price">XXX</span>
+                    <span class="old__price">XXX</span>
+                  </div>
+
+                    <a href="#" class="action__btn cart__btn" aria-label="Add To Cart">
+                    <i class="fi fi-rs-shopping-bag-add"></i>
+                    </a>
+                </div>
+              </div>
+
+              <div class="product__item">
+                <div class="product__banner">
+                  <a href="details.html" class="product__images">
+                    <img src="/assets/img/Products/Product 4/Mac mini M2 Pro.png" alt="" class="product__img default">
+
+                    <img 
+                      src="/assets/img/Products/Product 4/Mac mini M2 Pro Front.png" 
+                      alt="" 
+                      class="product__img hover" 
+                    />
+                  </a>
+
+                  <div class="product__actions">
+                    <a href="#" class="action__btn" aria-label="Quick View">
+                      <i class="fi fi-rs-eye"></i>
+                    </a>
+
+                    <a 
+                      href="#" 
+                      class="action__btn" 
+                      aria-label="Add To Wishlist"
+                    >
+                      <i class="fi fi-rs-heart"></i>
+                    </a>
+
+                    <a href="#" class="action__btn" aria-label="Compare">
+                      <i class="fi fi-rs-shuffle"></i>
+                    </a>
+                  </div>
+
+                  <div class="product__badge light-blue">Hot</div>
+                </div>
+
+                <div class="product__content">
+                  <span class="product__category">Mac</span>
+                  <a href="details.html">
+                    <h3 class="product__title">Macbook Air 13 inch</h3>
+                  </a>
+                  <div class="product__rating">
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                  </div>
+                  <div class="product__price flex">
+                    <span class="new__price">XXX</span>
+                    <span class="old__price">XXX</span>
+                  </div>
+
+                    <a href="#" class="action__btn cart__btn" aria-label="Add To Cart">
+                    <i class="fi fi-rs-shopping-bag-add"></i>
+                    </a>
+                </div>
+              </div>
+
+              <div class="product__item">
+                <div class="product__banner">
+                  <a href="details.html" class="product__images">
+                    <img src="/assets/img/Products/Product 5/Mac studio M2 Ultra.png" alt="" class="product__img default">
+
+                    <img 
+                      src="/assets/img/Products/Product 5/Mac studio M2 Ultra Front.png" 
+                      alt="" 
+                      class="product__img hover" 
+                    />
+                  </a>
+
+                  <div class="product__actions">
+                    <a href="#" class="action__btn" aria-label="Quick View">
+                      <i class="fi fi-rs-eye"></i>
+                    </a>
+
+                    <a 
+                      href="#" 
+                      class="action__btn" 
+                      aria-label="Add To Wishlist"
+                    >
+                      <i class="fi fi-rs-heart"></i>
+                    </a>
+
+                    <a href="#" class="action__btn" aria-label="Compare">
+                      <i class="fi fi-rs-shuffle"></i>
+                    </a>
+                  </div>
+
+                  <div class="product__badge light-pink">-30%</div>
+                </div>
+
+                <div class="product__content">
+                  <span class="product__category">Mac</span>
+                  <a href="details.html">
+                    <h3 class="product__title">Macbook Air 13 inch</h3>
+                  </a>
+                  <div class="product__rating">
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                  </div>
+                  <div class="product__price flex">
+                    <span class="new__price">XXX</span>
+                    <span class="old__price">XXX</span>
+                  </div>
+
+                    <a href="#" class="action__btn cart__btn" aria-label="Add To Cart">
+                    <i class="fi fi-rs-shopping-bag-add"></i>
+                    </a>
+                </div>
+              </div>
+
+              <div class="product__item">
+                <div class="product__banner">
+                  <a href="details.html" class="product__images">
+                    <img src="/assets/img/Products/Product 6/Mac Pro M2 Ultra.png" alt="" class="product__img default">
+
+                    <img 
+                      src="/assets/img/Products/Product 6/Mac Pro M2 Ultra Front.png" 
+                      alt="" 
+                      class="product__img hover" 
+                    />
+                  </a>
+
+                  <div class="product__actions">
+                    <a href="#" class="action__btn" aria-label="Quick View">
+                      <i class="fi fi-rs-eye"></i>
+                    </a>
+
+                    <a 
+                      href="#" 
+                      class="action__btn" 
+                      aria-label="Add To Wishlist"
+                    >
+                      <i class="fi fi-rs-heart"></i>
+                    </a>
+
+                    <a href="#" class="action__btn" aria-label="Compare">
+                      <i class="fi fi-rs-shuffle"></i>
+                    </a>
+                  </div>
+
+                  <div class="product__badge light-pink">-22%</div>
+                </div>
+
+                <div class="product__content">
+                  <span class="product__category">Mac</span>
+                  <a href="details.html">
+                    <h3 class="product__title">Macbook Air 13 inch</h3>
+                  </a>
+                  <div class="product__rating">
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                  </div>
+                  <div class="product__price flex">
+                    <span class="new__price">XXX</span>
+                    <span class="old__price">XXX</span>
+                  </div>
+
+                    <a href="#" class="action__btn cart__btn" aria-label="Add To Cart">
+                    <i class="fi fi-rs-shopping-bag-add"></i>
+                    </a>
+                </div>
+              </div>
+
+              <div class="product__item">
+                <div class="product__banner">
+                  <a href="details.html" class="product__images">
+                    <img src="/assets/img/Products/Product 7/Pro Display Front.png" alt="" class="product__img default">
+
+                    <img 
+                      src="/assets/img/Products/Product 7/Pro display back.png" 
+                      alt="" 
+                      class="product__img hover" 
+                    />
+                  </a>
+
+                  <div class="product__actions">
+                    <a href="#" class="action__btn" aria-label="Quick View">
+                      <i class="fi fi-rs-eye"></i>
+                    </a>
+
+                    <a 
+                      href="#" 
+                      class="action__btn" 
+                      aria-label="Add To Wishlist"
+                    >
+                      <i class="fi fi-rs-heart"></i>
+                    </a>
+
+                    <a href="#" class="action__btn" aria-label="Compare">
+                      <i class="fi fi-rs-shuffle"></i>
+                    </a>
+                  </div>
+
+                  <div class="product__badge light-green">Hot</div>
+                </div>
+
+                <div class="product__content">
+                  <span class="product__category">Mac</span>
+                  <a href="details.html">
+                    <h3 class="product__title">Macbook Air 13 inch</h3>
+                  </a>
+                  <div class="product__rating">
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                  </div>
+                  <div class="product__price flex">
+                    <span class="new__price">XXX</span>
+                    <span class="old__price">XXX</span>
+                  </div>
+
+                    <a href="#" class="action__btn cart__btn" aria-label="Add To Cart">
+                    <i class="fi fi-rs-shopping-bag-add"></i>
+                    </a>
+                </div>
+              </div>
+
+              <div class="product__item">
+                <div class="product__banner">
+                  <a href="details.html" class="product__images">
+                    <img src="/assets/img/Products/Product 8/Magic Mouse.png" alt="" class="product__img default">
+
+                    <img 
+                      src="/assets/img/Products/Product 8/Magic Mouse back.png" 
+                      alt="" 
+                      class="product__img hover" 
+                    />
+                  </a>
+
+                  <div class="product__actions">
+                    <a href="#" class="action__btn" aria-label="Quick View">
+                      <i class="fi fi-rs-eye"></i>
+                    </a>
+
+                    <a 
+                      href="#" 
+                      class="action__btn" 
+                      aria-label="Add To Wishlist"
+                    >
+                      <i class="fi fi-rs-heart"></i>
+                    </a>
+
+                    <a href="#" class="action__btn" aria-label="Compare">
+                      <i class="fi fi-rs-shuffle"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="product__content">
+                  <span class="product__category">Mac</span>
+                  <a href="details.html">
+                    <h3 class="product__title">Macbook Air 13 inch</h3>
+                  </a>
+                  <div class="product__rating">
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                  </div>
+                  <div class="product__price flex">
+                    <span class="new__price">XXX</span>
+                    <span class="old__price">XXX</span>
+                  </div>
+
+                    <a href="#" class="action__btn cart__btn" aria-label="Add To Cart">
+                    <i class="fi fi-rs-shopping-bag-add"></i>
+                    </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab__item">
+            <div class="products__container grid">
+              <div class="product__item">
+                <div class="product__banner">
+                  <a href="details.html" class="product__images">
+                    <img src="/assets/img/Products/Product 1/Macbook Air 13 inch M3 chip Midnight.png" alt="" class="product__img default">
+
+                    <img 
+                      src="/assets/img/Products/Product 1/Macbook Air 13 inch M3 chip Midnight Front.png" 
+                      alt="" 
+                      class="product__img hover" 
+                    />
+                  </a>
+
+                  <div class="product__actions">
+                    <a href="#" class="action__btn" aria-label="Quick View">
+                      <i class="fi fi-rs-eye"></i>
+                    </a>
+
+                    <a 
+                      href="#" 
+                      class="action__btn" 
+                      aria-label="Add To Wishlist"
+                    >
+                      <i class="fi fi-rs-heart"></i>
+                    </a>
+
+                    <a href="#" class="action__btn" aria-label="Compare">
+                      <i class="fi fi-rs-shuffle"></i>
+                    </a>
+                  </div>
+
+                  <div class="product__badge light-pink">Hot</div>
+                </div>
+
+                <div class="product__content">
+                  <span class="product__category">Mac</span>
+                  <a href="details.html">
+                    <h3 class="product__title">Macbook Air 13 inch</h3>
+                  </a>
+                  <div class="product__rating">
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                  </div>
+                  <div class="product__price flex">
+                    <span class="new__price">XXX</span>
+                    <span class="old__price">XXX</span>
+                  </div>
+
+                    <a href="#" class="action__btn cart__btn" aria-label="Add To Cart">
+                    <i class="fi fi-rs-shopping-bag-add"></i>
+                    </a>
+                </div>
+              </div>
+
+              <div class="product__item">
+                <div class="product__banner">
+                  <a href="details.html" class="product__images">
+                    <img src="/assets/img/Products/Product 2/Macbook Pro 16-inch (M3 Max chip).png">
+
+                    <img 
+                      src="/assets/img/Products/Product 2/Macbook Pro 16-inch (M3 Max chip) Front.png" 
+                      alt="" 
+                      class="product__img hover" 
+                    />
+                  </a>
+
+                  <div class="product__actions">
+                    <a href="#" class="action__btn" aria-label="Quick View">
+                      <i class="fi fi-rs-eye"></i>
+                    </a>
+
+                    <a 
+                      href="#" 
+                      class="action__btn" 
+                      aria-label="Add To Wishlist"
+                    >
+                      <i class="fi fi-rs-heart"></i>
+                    </a>
+
+                    <a href="#" class="action__btn" aria-label="Compare">
+                      <i class="fi fi-rs-shuffle"></i>
+                    </a>
+                  </div>
+
+                  <div class="product__badge light-green">Hot</div>
+                </div>
+
+                <div class="product__content">
+                  <span class="product__category">Mac</span>
+                  <a href="details.html">
+                    <h3 class="product__title">Macbook Air 13 inch</h3>
+                  </a>
+                  <div class="product__rating">
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                  </div>
+                  <div class="product__price flex">
+                    <span class="new__price">XXX</span>
+                    <span class="old__price">XXX</span>
+                  </div>
+
+                    <a href="#" class="action__btn cart__btn" aria-label="Add To Cart">
+                    <i class="fi fi-rs-shopping-bag-add"></i>
+                    </a>
+                </div>
+              </div>
+
+              <div class="product__item">
+                <div class="product__banner">
+                  <a href="details.html" class="product__images">
+                    <img src="/assets/img/Products/Product 3/imac 24 blue selection m3 chip.png" alt="" class="product__img default">
+
+                    <img 
+                      src="/assets/img/Products/Product 3/imac 24 blue selection m3 chip back.png" 
+                      alt="" 
+                      class="product__img hover" 
+                    />
+                  </a>
+
+                  <div class="product__actions">
+                    <a href="#" class="action__btn" aria-label="Quick View">
+                      <i class="fi fi-rs-eye"></i>
+                    </a>
+
+                    <a 
+                      href="#" 
+                      class="action__btn" 
+                      aria-label="Add To Wishlist"
+                    >
+                      <i class="fi fi-rs-heart"></i>
+                    </a>
+
+                    <a href="#" class="action__btn" aria-label="Compare">
+                      <i class="fi fi-rs-shuffle"></i>
+                    </a>
+                  </div>
+
+                  <div class="product__badge light-orange">Hot</div>
+                </div>
+
+                <div class="product__content">
+                  <span class="product__category">Mac</span>
+                  <a href="details.html">
+                    <h3 class="product__title">Macbook Air 13 inch</h3>
+                  </a>
+                  <div class="product__rating">
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                  </div>
+                  <div class="product__price flex">
+                    <span class="new__price">XXX</span>
+                    <span class="old__price">XXX</span>
+                  </div>
+
+                    <a href="#" class="action__btn cart__btn" aria-label="Add To Cart">
+                    <i class="fi fi-rs-shopping-bag-add"></i>
+                    </a>
+                </div>
+              </div>
+
+              <div class="product__item">
+                <div class="product__banner">
+                  <a href="details.html" class="product__images">
+                    <img src="/assets/img/Products/Product 4/Mac mini M2 Pro.png" alt="" class="product__img default">
+
+                    <img 
+                      src="/assets/img/Products/Product 4/Mac mini M2 Pro Front.png" 
+                      alt="" 
+                      class="product__img hover" 
+                    />
+                  </a>
+
+                  <div class="product__actions">
+                    <a href="#" class="action__btn" aria-label="Quick View">
+                      <i class="fi fi-rs-eye"></i>
+                    </a>
+
+                    <a 
+                      href="#" 
+                      class="action__btn" 
+                      aria-label="Add To Wishlist"
+                    >
+                      <i class="fi fi-rs-heart"></i>
+                    </a>
+
+                    <a href="#" class="action__btn" aria-label="Compare">
+                      <i class="fi fi-rs-shuffle"></i>
+                    </a>
+                  </div>
+
+                  <div class="product__badge light-blue">Hot</div>
+                </div>
+
+                <div class="product__content">
+                  <span class="product__category">Mac</span>
+                  <a href="details.html">
+                    <h3 class="product__title">Macbook Air 13 inch</h3>
+                  </a>
+                  <div class="product__rating">
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                  </div>
+                  <div class="product__price flex">
+                    <span class="new__price">XXX</span>
+                    <span class="old__price">XXX</span>
+                  </div>
+
+                    <a href="#" class="action__btn cart__btn" aria-label="Add To Cart">
+                    <i class="fi fi-rs-shopping-bag-add"></i>
+                    </a>
+                </div>
+              </div>
+
+              <div class="product__item">
+                <div class="product__banner">
+                  <a href="details.html" class="product__images">
+                    <img src="/assets/img/Products/Product 5/Mac studio M2 Ultra.png" alt="" class="product__img default">
+
+                    <img 
+                      src="/assets/img/Products/Product 5/Mac studio M2 Ultra Front.png" 
+                      alt="" 
+                      class="product__img hover" 
+                    />
+                  </a>
+
+                  <div class="product__actions">
+                    <a href="#" class="action__btn" aria-label="Quick View">
+                      <i class="fi fi-rs-eye"></i>
+                    </a>
+
+                    <a 
+                      href="#" 
+                      class="action__btn" 
+                      aria-label="Add To Wishlist"
+                    >
+                      <i class="fi fi-rs-heart"></i>
+                    </a>
+
+                    <a href="#" class="action__btn" aria-label="Compare">
+                      <i class="fi fi-rs-shuffle"></i>
+                    </a>
+                  </div>
+
+                  <div class="product__badge light-pink">-30%</div>
+                </div>
+
+                <div class="product__content">
+                  <span class="product__category">Mac</span>
+                  <a href="details.html">
+                    <h3 class="product__title">Macbook Air 13 inch</h3>
+                  </a>
+                  <div class="product__rating">
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                  </div>
+                  <div class="product__price flex">
+                    <span class="new__price">XXX</span>
+                    <span class="old__price">XXX</span>
+                  </div>
+
+                    <a href="#" class="action__btn cart__btn" aria-label="Add To Cart">
+                    <i class="fi fi-rs-shopping-bag-add"></i>
+                    </a>
+                </div>
+              </div>
+
+              <div class="product__item">
+                <div class="product__banner">
+                  <a href="details.html" class="product__images">
+                    <img src="/assets/img/Products/Product 6/Mac Pro M2 Ultra.png" alt="" class="product__img default">
+
+                    <img 
+                      src="/assets/img/Products/Product 6/Mac Pro M2 Ultra Front.png" 
+                      alt="" 
+                      class="product__img hover" 
+                    />
+                  </a>
+
+                  <div class="product__actions">
+                    <a href="#" class="action__btn" aria-label="Quick View">
+                      <i class="fi fi-rs-eye"></i>
+                    </a>
+
+                    <a 
+                      href="#" 
+                      class="action__btn" 
+                      aria-label="Add To Wishlist"
+                    >
+                      <i class="fi fi-rs-heart"></i>
+                    </a>
+
+                    <a href="#" class="action__btn" aria-label="Compare">
+                      <i class="fi fi-rs-shuffle"></i>
+                    </a>
+                  </div>
+
+                  <div class="product__badge light-pink">-22%</div>
+                </div>
+
+                <div class="product__content">
+                  <span class="product__category">Mac</span>
+                  <a href="details.html">
+                    <h3 class="product__title">Macbook Air 13 inch</h3>
+                  </a>
+                  <div class="product__rating">
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                  </div>
+                  <div class="product__price flex">
+                    <span class="new__price">XXX</span>
+                    <span class="old__price">XXX</span>
+                  </div>
+
+                    <a href="#" class="action__btn cart__btn" aria-label="Add To Cart">
+                    <i class="fi fi-rs-shopping-bag-add"></i>
+                    </a>
+                </div>
+              </div>
+
+              <div class="product__item">
+                <div class="product__banner">
+                  <a href="details.html" class="product__images">
+                    <img src="/assets/img/Products/Product 7/Pro Display Front.png" alt="" class="product__img default">
+
+                    <img 
+                      src="/assets/img/Products/Product 7/Pro display back.png" 
+                      alt="" 
+                      class="product__img hover" 
+                    />
+                  </a>
+
+                  <div class="product__actions">
+                    <a href="#" class="action__btn" aria-label="Quick View">
+                      <i class="fi fi-rs-eye"></i>
+                    </a>
+
+                    <a 
+                      href="#" 
+                      class="action__btn" 
+                      aria-label="Add To Wishlist"
+                    >
+                      <i class="fi fi-rs-heart"></i>
+                    </a>
+
+                    <a href="#" class="action__btn" aria-label="Compare">
+                      <i class="fi fi-rs-shuffle"></i>
+                    </a>
+                  </div>
+
+                  <div class="product__badge light-green">Hot</div>
+                </div>
+
+                <div class="product__content">
+                  <span class="product__category">Mac</span>
+                  <a href="details.html">
+                    <h3 class="product__title">Macbook Air 13 inch</h3>
+                  </a>
+                  <div class="product__rating">
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                  </div>
+                  <div class="product__price flex">
+                    <span class="new__price">XXX</span>
+                    <span class="old__price">XXX</span>
+                  </div>
+
+                    <a href="#" class="action__btn cart__btn" aria-label="Add To Cart">
+                    <i class="fi fi-rs-shopping-bag-add"></i>
+                    </a>
+                </div>
+              </div>
+
+              <div class="product__item">
+                <div class="product__banner">
+                  <a href="details.html" class="product__images">
+                    <img src="/assets/img/Products/Product 8/Magic Mouse.png" alt="" class="product__img default">
+
+                    <img 
+                      src="/assets/img/Products/Product 8/Magic Mouse back.png" 
+                      alt="" 
+                      class="product__img hover" 
+                    />
+                  </a>
+
+                  <div class="product__actions">
+                    <a href="#" class="action__btn" aria-label="Quick View">
+                      <i class="fi fi-rs-eye"></i>
+                    </a>
+
+                    <a 
+                      href="#" 
+                      class="action__btn" 
+                      aria-label="Add To Wishlist"
+                    >
+                      <i class="fi fi-rs-heart"></i>
+                    </a>
+
+                    <a href="#" class="action__btn" aria-label="Compare">
+                      <i class="fi fi-rs-shuffle"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="product__content">
+                  <span class="product__category">Mac</span>
+                  <a href="details.html">
+                    <h3 class="product__title">Macbook Air 13 inch</h3>
+                  </a>
+                  <div class="product__rating">
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                    <i class="fi fi-rs-star"></i>
+                  </div>
+                  <div class="product__price flex">
+                    <span class="new__price">XXX</span>
+                    <span class="old__price">XXX</span>
+                  </div>
+
+                    <a href="#" class="action__btn cart__btn" aria-label="Add To Cart">
+                    <i class="fi fi-rs-shopping-bag-add"></i>
+                    </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!--=============== DEALS ===============-->
       <section class="deals"></section>
@@ -46,10 +1561,10 @@
     <!--=============== FOOTER ===============-->
     <footer class="footer"></footer>
 
-    <!--=============== SWIPER JS ===============-->
-    <script src=""></script>
+    <!--=============== SWIPER JS (Slider Imported from web)===============-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!--=============== MAIN JS ===============-->
-    <script src=""></script>
+    <script src="/js/main.js"></script>
   </body>
 </html>
