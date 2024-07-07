@@ -459,18 +459,18 @@ padding-block: 0.875rem;
   transition: all .2s var(--transition);
 }
 
-/* .action__btn {                                      
+.action__btn {                                      
   width: 40px;
   height: 40px;
   line-height: 42px;
   text-align: center;
-  border-radius: 50%
+  border-radius: 50%;
   background-color: var(--first-color-alt);
   border: 1px solid var(--border-color);
   color: var(--text-color);
   font-size: var(--small-font-size);
   position: relative;
-}                                                      */  /*will be getting on once icons like wishlist shuffle icon works */
+}
 
 .action__btn::before,
 .action__btn::after {
@@ -480,14 +480,14 @@ padding-block: 0.875rem;
   transition: all .3s cubic-bezier(0.71, 1.7, 0.77, 1.24);
 }
 
-/* .action__btn::before{
+.action__btn::before{
   content: '';
   top: -2px;
   border: .5rem solid transparent;
   border-top-color: var(--first-color);
-}                                                       */ /*will be getting on once icons like wishlist shuffle icon works */
+}
 
-/*.action__btn::after {
+.action__btn::after {
   content: attr(aria-label);
   bottom: 100%;
   background-color: var(--first-color);
@@ -497,7 +497,7 @@ padding-block: 0.875rem;
   padding-inline: .625rem;
   border-radius: .25rem;
   line-height: 2.58;
-}                                                        */ /*will be getting on once icons like wishlist shuffle icon works */
+}
 
 .product__badge {
   position: absolute;
