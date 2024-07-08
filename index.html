@@ -185,13 +185,13 @@
       <!--=============== PRODUCTS ===============-->
       <section class="products section container">
         <div class="tab__btns">
-          <span class="tab__btn active-tab">Featured</span>
-          <span class="tab__btn">Popular</span>
-          <span class="tab__btn">New added</span>
+          <span class="tab__btn active-tab" data-target="#featured">Featured</span>
+          <span class="tab__btn" data-target="#popular">Popular</span>
+          <span class="tab__btn" data-target="#new-added">New added</span>
         </div>
 
         <div class="tab__items">
-          <div class="tab__item active-tab">
+          <div class="tab__item active-tab" content id="featured">
             <div class="products__container grid">
               <div class="product__item">
                 <div class="product__banner">
@@ -641,15 +641,15 @@
             </div>
           </div>
 
-          <div class="tab__item">
+          <div class="tab__item" content id="popular">
             <div class="products__container grid">
               <div class="product__item">
                 <div class="product__banner">
                   <a href="details.html" class="product__images">
-                    <img src="/assets/img/Products/Product 1/Macbook Air 13 inch M3 chip Midnight.png" alt="" class="product__img default">
+                    <img src="/assets/img/Products/Product 9/Magic Trackpad Black.png" alt="" class="product__img default">
 
                     <img 
-                      src="/assets/img/Products/Product 1/Macbook Air 13 inch M3 chip Midnight Front.png" 
+                      src="/assets/img/Products/Product 9/Magic Trackpad Black Front.png"
                       alt="" 
                       class="product__img hover" 
                     />
@@ -758,10 +758,10 @@
               <div class="product__item">
                 <div class="product__banner">
                   <a href="details.html" class="product__images">
-                    <img src="/assets/img/Products/Product 3/imac 24 blue selection m3 chip.png" alt="" class="product__img default">
+                    <img src="/assets/img/Products/Product 10/35W Dual USB-C Port Compact Power Adapter.png" alt="" class="product__img default">
 
                     <img 
-                      src="/assets/img/Products/Product 3/imac 24 blue selection m3 chip back.png" 
+                      src="/assets/img/Products/Product 10/35W Dual USB-C Port Compact Power Adapter Back.png" 
                       alt="" 
                       class="product__img hover" 
                     />
@@ -926,10 +926,10 @@
               <div class="product__item">
                 <div class="product__banner">
                   <a href="details.html" class="product__images">
-                    <img src="/assets/img/Products/Product 6/Mac Pro M2 Ultra.png" alt="" class="product__img default">
+                    <img src="/assets/img/Products/Product 11/HomePod mini.png" alt="" class="product__img default">
 
                     <img 
-                      src="/assets/img/Products/Product 6/Mac Pro M2 Ultra Front.png" 
+                      src="/assets/img/Products/Product 11/HomePod mini front.png" 
                       alt="" 
                       class="product__img hover" 
                     />
@@ -1091,7 +1091,7 @@
             </div>
           </div>
 
-          <div class="tab__item">
+          <div class="tab__item" content id="new-added">
             <div class="products__container grid">
               <div class="product__item">
                 <div class="product__banner">
@@ -1152,10 +1152,10 @@
               <div class="product__item">
                 <div class="product__banner">
                   <a href="details.html" class="product__images">
-                    <img src="/assets/img/Products/Product 2/Macbook Pro 16-inch (M3 Max chip).png">
+                    <img src="/assets/img/Products/Product 12/HomePod.png" alt="" class="product__img default">
 
                     <img 
-                      src="/assets/img/Products/Product 2/Macbook Pro 16-inch (M3 Max chip) Front.png" 
+                      src="/assets/img/Products/Product 12/HomePod Front.png" 
                       alt="" 
                       class="product__img hover" 
                     />
@@ -1208,10 +1208,10 @@
               <div class="product__item">
                 <div class="product__banner">
                   <a href="details.html" class="product__images">
-                    <img src="/assets/img/Products/Product 3/imac 24 blue selection m3 chip.png" alt="" class="product__img default">
+                    <img src="/assets/img/Products/Product 13/USB-C to MagSafe 3 Cable (2 m) - Space Black.png" alt="" class="product__img default">
 
                     <img 
-                      src="/assets/img/Products/Product 3/imac 24 blue selection m3 chip back.png" 
+                      src="/assets/img/Products/Product 13/USB-C to MagSafe 3 Cable (2 m) - Space Black Front.png" 
                       alt="" 
                       class="product__img hover" 
                     />
@@ -1264,10 +1264,10 @@
               <div class="product__item">
                 <div class="product__banner">
                   <a href="details.html" class="product__images">
-                    <img src="/assets/img/Products/Product 4/Mac mini M2 Pro.png" alt="" class="product__img default">
+                    <img src="/assets/img/Products/Product 10/35W Dual USB-C Port Compact Power Adapter.png" alt="" class="product__img default">
 
                     <img 
-                      src="/assets/img/Products/Product 4/Mac mini M2 Pro Front.png" 
+                      src="/assets/img/Products/Product 10/35W Dual USB-C Port Compact Power Adapter Back.png" 
                       alt="" 
                       class="product__img hover" 
                     />
@@ -1376,10 +1376,10 @@
               <div class="product__item">
                 <div class="product__banner">
                   <a href="details.html" class="product__images">
-                    <img src="/assets/img/Products/Product 6/Mac Pro M2 Ultra.png" alt="" class="product__img default">
+                    <img src="/assets/img/Products/Product 9/Magic Trackpad Black.png" alt="" class="product__img default">
 
                     <img 
-                      src="/assets/img/Products/Product 6/Mac Pro M2 Ultra Front.png" 
+                      src="/assets/img/Products/Product 9/Magic Trackpad Black Front.png" 
                       alt="" 
                       class="product__img hover" 
                     />
@@ -1544,13 +1544,760 @@
       </section>
 
       <!--=============== DEALS ===============-->
-      <section class="deals"></section>
+      <section class="deals section">
+        <div class="deals__container container grid">
+          <div class="deals__item">
+            <div class="deals__group">
+              <h3 class="deals__brand">Deal of the Day</h3>
+              <span class="deals__category">Limited quamtities.</span>
+            </div>
+
+            <h4 class="deals__title">Summer Collection New Morden Design</h4>
+
+            <div class="deals__price flex">
+              <span class="new__price">XXX</span>
+              <span class="old__price">XXXX</span>
+            </div>
+
+            <div class="deals__group">
+              <p class="deals__countdown-text">Hurry Up! Offer End In:</p>
+
+              <div class="countdown">
+                <div class="countdowm__amount">
+                  <p class="countdown__period">30</p>
+                  <span class="unit">Days</span>
+                </div>
+                <div class="countdowm__amount">
+                  <p class="countdown__period">22</p>
+                  <span class="unit">Hours</span>
+                </div>
+                <div class="countdowm__amount">
+                  <p class="countdown__period">57</p>
+                  <span class="unit">Mins</span>
+                </div>
+                <div class="countdowm__amount">
+                  <p class="countdown__period">24</p>
+                  <span class="unit">Sec</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="div__btn">
+              <a href="details.html" class="btn btn--md">Shop Now</a>
+            </div>
+          </div>
+
+          <div class="deals__item">
+            <div class="deals__group">
+              <h3 class="deals__brand">Product of the Month</h3>
+              <span class="deals__category">Limited quamtities.</span>
+            </div>
+
+            <h4 class="deals__title">Buy something new</h4>
+
+            <div class="deals__price flex">
+              <span class="new__price">XXX</span>
+              <span class="old__price">XXXX</span>
+            </div>
+
+            <div class="deals__group">
+              <p class="deals__countdown-text">Hurry Up! Offer End In:</p>
+
+              <div class="countdown">
+                <div class="countdowm__amount">
+                  <p class="countdown__period">30</p>
+                  <span class="unit">Days</span>
+                </div>
+                <div class="countdowm__amount">
+                  <p class="countdown__period">22</p>
+                  <span class="unit">Hours</span>
+                </div>
+                <div class="countdowm__amount">
+                  <p class="countdown__period">57</p>
+                  <span class="unit">Mins</span>
+                </div>
+                <div class="countdowm__amount">
+                  <p class="countdown__period">24</p>
+                  <span class="unit">Sec</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="div__btn">
+              <a href="details.html" class="btn btn--md">Shop Now</a>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!--=============== NEW ARRIVALS ===============-->
-      <section class="new__arrivals"></section>
+      <section class="new__arrivals container section">
+        <h3 class="section__title"><span>New</span> Arrivals</h3>
+
+        <div class="new__container swiper">
+          <div class="swiper-wrapper">
+            <div class="product__item swiper-slide">
+              <div class="product__banner">
+                <a href="details.html" class="product__images">
+                  <img src="/assets/img/New Arrivals/Apple Watch Series 9.jpg" alt="" class="product__img default">
+
+                  <img 
+                    src="/assets/img/New Arrivals/Apple Watch Series 9 Front.jpg" 
+                    alt="" 
+                    class="product__img hover" 
+                  />
+                </a>
+
+                <div class="product__actions">
+                  <a href="#" class="action__btn" aria-label="Quick View">
+                    <i class="ri-eye-line"></i>
+                  </a>
+
+                  <a 
+                    href="#" 
+                    class="action__btn" 
+                    aria-label="Add To Wishlist"
+                  >
+                    <i class="ri-heart-3-line"></i>
+                  </a>
+
+                  <a href="#" class="action__btn" aria-label="Compare">
+                    <i class="ri-shuffle-line"></i>
+                  </a>
+                </div>
+
+                <div class="product__badge light-pink">Hot</div>
+              </div>
+
+              <div class="product__content">
+                <span class="product__category">Apple</span>
+                <a href="details.html">
+                  <h3 class="product__title">Macbook Air 13 inch</h3>
+                </a>
+                <div class="product__rating">
+                  <i class="fi fi-rs-star"></i>
+                  <i class="fi fi-rs-star"></i>
+                  <i class="fi fi-rs-star"></i>
+                  <i class="fi fi-rs-star"></i>
+                  <i class="fi fi-rs-star"></i>
+                </div>
+                <div class="product__price flex">
+                  <span class="new__price">XXX</span>
+                  <span class="old__price">XXX</span>
+                </div>
+
+                  <a href="#" class="action__btn cart__btn" aria-label="Add To Cart">
+                  <i class="ri-shopping-cart-2-line"></i>
+                  </a>
+              </div>
+            </div>
+
+            <div class="product__item swiper-slide">
+              <div class="product__banner">
+                <a href="details.html" class="product__images">
+                  <img src="/assets/img/New Arrivals/Apple Watch Ultra 2.jpg" alt="" class="product__img default">
+
+                  <img 
+                    src="/assets/img/New Arrivals/Apple Watch Ultra 2 Front.jpg" 
+                    alt="" 
+                    class="product__img hover" 
+                  />
+                </a>
+
+                <div class="product__actions">
+                  <a href="#" class="action__btn" aria-label="Quick View">
+                    <i class="ri-eye-line"></i>
+                  </a>
+
+                  <a 
+                    href="#" 
+                    class="action__btn" 
+                    aria-label="Add To Wishlist"
+                  >
+                    <i class="ri-heart-3-line"></i>
+                  </a>
+
+                  <a href="#" class="action__btn" aria-label="Compare">
+                    <i class="ri-shuffle-line"></i>
+                  </a>
+                </div>
+
+                <div class="product__badge light-green">Hot</div>
+              </div>
+
+              <div class="product__content">
+                <span class="product__category">Mac</span>
+                <a href="details.html">
+                  <h3 class="product__title">Macbook Pro 16-inch</h3>
+                </a>
+                <div class="product__rating">
+                  <i class="fi fi-rs-star"></i>
+                  <i class="fi fi-rs-star"></i>
+                  <i class="fi fi-rs-star"></i>
+                  <i class="fi fi-rs-star"></i>
+                  <i class="fi fi-rs-star"></i>
+                </div>
+                <div class="product__price flex">
+                  <span class="new__price">XXX</span>
+                  <span class="old__price">XXX</span>
+                </div>
+
+                  <a href="#" class="action__btn cart__btn" aria-label="Add To Cart">
+                  <i class="ri-shopping-cart-2-line"></i>
+                  </a>
+              </div>
+            </div>
+
+            <div class="product__item swiper-slide">
+              <div class="product__banner">
+                <a href="details.html" class="product__images">
+                  <img src="/assets/img/New Arrivals/Apple-iPhone-16-Plus.jpg" alt="" class="product__img default">
+
+                  <img 
+                    src="/assets/img/New Arrivals/Apple-iPhone-16-Plus front.jpg" 
+                    alt="" 
+                    class="product__img hover" 
+                  />
+                </a>
+
+                <div class="product__actions">
+                  <a href="#" class="action__btn" aria-label="Quick View">
+                    <i class="ri-eye-line"></i>
+                  </a>
+
+                  <a 
+                    href="#" 
+                    class="action__btn" 
+                    aria-label="Add To Wishlist"
+                  >
+                    <i class="ri-heart-3-line"></i>
+                  </a>
+
+                  <a href="#" class="action__btn" aria-label="Compare">
+                    <i class="ri-shuffle-line"></i>
+                  </a>
+                </div>
+
+                <div class="product__badge light-orange">Hot</div>
+              </div>
+
+              <div class="product__content">
+                <span class="product__category">Mac</span>
+                <a href="details.html">
+                  <h3 class="product__title">Macbook Air 13 inch</h3>
+                </a>
+                <div class="product__rating">
+                  <i class="fi fi-rs-star"></i>
+                  <i class="fi fi-rs-star"></i>
+                  <i class="fi fi-rs-star"></i>
+                  <i class="fi fi-rs-star"></i>
+                  <i class="fi fi-rs-star"></i>
+                </div>
+                <div class="product__price flex">
+                  <span class="new__price">XXX</span>
+                  <span class="old__price">XXX</span>
+                </div>
+
+                  <a href="#" class="action__btn cart__btn" aria-label="Add To Cart">
+                  <i class="ri-shopping-cart-2-line"></i>
+                  </a>
+              </div>
+            </div>
+
+            <div class="product__item swiper-slide">
+              <div class="product__banner">
+                <a href="details.html" class="product__images">
+                  <img src="/assets/img/New Arrivals/Apple-WWDC23-Vision-Pro-glass-230605_big.jpg.large.jpg" alt="" class="product__img default">
+
+                  <img 
+                    src="/assets/img/New Arrivals/Apple-WWDC23-Vision-Pro-glass-230605_big.jpg.large front.jpg" 
+                    alt="" 
+                    class="product__img hover" 
+                  />
+                </a>
+
+                <div class="product__actions">
+                  <a href="#" class="action__btn" aria-label="Quick View">
+                    <i class="ri-eye-line"></i>
+                  </a>
+
+                  <a 
+                    href="#" 
+                    class="action__btn" 
+                    aria-label="Add To Wishlist"
+                  >
+                    <i class="ri-heart-3-line"></i>
+                  </a>
+
+                  <a href="#" class="action__btn" aria-label="Compare">
+                    <i class="ri-shuffle-line"></i>
+                  </a>
+                </div>
+
+                <div class="product__badge light-blue">Hot</div>
+              </div>
+
+              <div class="product__content">
+                <span class="product__category">Mac</span>
+                <a href="details.html">
+                  <h3 class="product__title">Macbook Air 13 inch</h3>
+                </a>
+                <div class="product__rating">
+                  <i class="fi fi-rs-star"></i>
+                  <i class="fi fi-rs-star"></i>
+                  <i class="fi fi-rs-star"></i>
+                  <i class="fi fi-rs-star"></i>
+                  <i class="fi fi-rs-star"></i>
+                </div>
+                <div class="product__price flex">
+                  <span class="new__price">XXX</span>
+                  <span class="old__price">XXX</span>
+                </div>
+
+                  <a href="#" class="action__btn cart__btn" aria-label="Add To Cart">
+                  <i class="ri-shopping-cart-2-line"></i>
+                  </a>
+              </div>
+            </div>
+
+            <div class="product__item swiper-slide">
+              <div class="product__banner">
+                <a href="details.html" class="product__images">
+                  <img src="/assets/img/New Arrivals/ipad-pro-storage-select-202405-13inch-spaceblack-matte-wificell.jpg" alt="" class="product__img default">
+
+                  <img 
+                    src="/assets/img/New Arrivals/ipad-pro-storage-select-202405-13inch-spaceblack-matte-wificell front.jpg" 
+                    alt="" 
+                    class="product__img hover" 
+                  />
+                </a>
+
+                <div class="product__actions">
+                  <a href="#" class="action__btn" aria-label="Quick View">
+                    <i class="ri-eye-line"></i>
+                  </a>
+
+                  <a 
+                    href="#" 
+                    class="action__btn" 
+                    aria-label="Add To Wishlist"
+                  >
+                    <i class="ri-heart-3-line"></i>
+                  </a>
+
+                  <a href="#" class="action__btn" aria-label="Compare">
+                    <i class="ri-shuffle-line"></i>
+                  </a>
+                </div>
+
+                <div class="product__badge light-pink">-30%</div>
+              </div>
+
+              <div class="product__content">
+                <span class="product__category">Mac</span>
+                <a href="details.html">
+                  <h3 class="product__title">Macbook Air 13 inch</h3>
+                </a>
+                <div class="product__rating">
+                  <i class="fi fi-rs-star"></i>
+                  <i class="fi fi-rs-star"></i>
+                  <i class="fi fi-rs-star"></i>
+                  <i class="fi fi-rs-star"></i>
+                  <i class="fi fi-rs-star"></i>
+                </div>
+                <div class="product__price flex">
+                  <span class="new__price">XXX</span>
+                  <span class="old__price">XXX</span>
+                </div>
+
+                  <a href="#" class="action__btn cart__btn" aria-label="Add To Cart">
+                  <i class="ri-shopping-cart-2-line"></i>
+                  </a>
+              </div>
+            </div>
+
+            <div class="product__item swiper-slide">
+              <div class="product__banner">
+                <a href="details.html" class="product__images">
+                  <img src="/assets/img/New Arrivals/iphone-15-pro-finish-select-202309-6-7inch-bluetitanium.png" alt="" class="product__img default">
+
+                  <img 
+                    src="/assets/img/New Arrivals/iphone-15-pro-finish-select-202309-6-7inch-bluetitanium front.png" 
+                    alt="" 
+                    class="product__img hover" 
+                  />
+                </a>
+
+                <div class="product__actions">
+                  <a href="#" class="action__btn" aria-label="Quick View">
+                    <i class="ri-eye-line"></i>
+                  </a>
+
+                  <a 
+                    href="#" 
+                    class="action__btn" 
+                    aria-label="Add To Wishlist"
+                  >
+                    <i class="ri-heart-3-line"></i>
+                  </a>
+
+                  <a href="#" class="action__btn" aria-label="Compare">
+                    <i class="ri-shuffle-line"></i>
+                  </a>
+                </div>
+
+                <div class="product__badge light-pink">-22%</div>
+              </div>
+
+              <div class="product__content">
+                <span class="product__category">Mac</span>
+                <a href="details.html">
+                  <h3 class="product__title">Macbook Air 13 inch</h3>
+                </a>
+                <div class="product__rating">
+                  <i class="fi fi-rs-star"></i>
+                  <i class="fi fi-rs-star"></i>
+                  <i class="fi fi-rs-star"></i>
+                  <i class="fi fi-rs-star"></i>
+                  <i class="fi fi-rs-star"></i>
+                </div>
+                <div class="product__price flex">
+                  <span class="new__price">XXX</span>
+                  <span class="old__price">XXX</span>
+                </div>
+
+                  <a href="#" class="action__btn cart__btn" aria-label="Add To Cart">
+                  <i class="ri-shopping-cart-2-line"></i>
+                  </a>
+              </div>
+            </div>
+
+            <div class="product__item swiper-slide">
+              <div class="product__banner">
+                <a href="details.html" class="product__images">
+                  <img src="/assets/img/New Arrivals/laptop Sleeve.jpg" alt="" class="product__img default">
+
+                  <img 
+                    src="/assets/img/New Arrivals/laptop sleeve front.jpg" 
+                    alt="" 
+                    class="product__img hover" 
+                  />
+                </a>
+
+                <div class="product__actions">
+                  <a href="#" class="action__btn" aria-label="Quick View">
+                    <i class="ri-eye-line"></i>
+                  </a>
+
+                  <a 
+                    href="#" 
+                    class="action__btn" 
+                    aria-label="Add To Wishlist"
+                  >
+                    <i class="ri-heart-3-line"></i>
+                  </a>
+
+                  <a href="#" class="action__btn" aria-label="Compare">
+                    <i class="ri-shuffle-line"></i>
+                  </a>
+                </div>
+
+                <div class="product__badge light-green">Hot</div>
+              </div>
+
+              <div class="product__content">
+                <span class="product__category">Mac</span>
+                <a href="details.html">
+                  <h3 class="product__title">Macbook Air 13 inch</h3>
+                </a>
+                <div class="product__rating">
+                  <i class="fi fi-rs-star"></i>
+                  <i class="fi fi-rs-star"></i>
+                  <i class="fi fi-rs-star"></i>
+                  <i class="fi fi-rs-star"></i>
+                  <i class="fi fi-rs-star"></i>
+                </div>
+                <div class="product__price flex">
+                  <span class="new__price">XXX</span>
+                  <span class="old__price">XXX</span>
+                </div>
+
+                  <a href="#" class="action__btn cart__btn" aria-label="Add To Cart">
+                  <i class="ri-shopping-cart-2-line"></i>
+                  </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-button-next">
+            <i class="ri-arrow-right-s-line"></i>
+          </div>
+          <div class="swiper-button-prev">
+            <i class="ri-arrow-left-s-line"></i>
+          </div>
+        </div>
+      </section>
 
       <!--=============== SHOWCASE ===============-->
-      <section class="showcase"></section>
+      <section class="showcase section">
+        <div class="showcase__container container grid">
+          <div class="showcase__wrapper">
+            <h3 class="section__title">Hot Releases</h3>
+
+            <div class="showcase__item">
+              <a href="details.html" class="showcase__img-box">
+                <img
+                  src="/assets/img/Hot Releases/Braided Loop Sunshine unity.jpg" alt=""
+                  class="showcase__img"
+                />
+              </a>
+
+              <div class="showcase__content">
+                <a href="details.html">
+                  <h4 class="showcase__title">Braided Loop Sunshine unity</h4>
+                </a>
+
+                <div class="showcase__price flex">
+                  <span class="new__price">XXX</span>
+                  <span class="old__price">XXX</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="showcase__item">
+              <a href="details.html" class="showcase__img-box">
+                <img
+                  src="/assets/img/Hot Releases/Soft mint Sport loop bg.jpg" alt=""
+                  class="showcase__img"
+                />
+              </a>
+
+              <div class="showcase__content">
+                <a href="details.html">
+                  <h4 class="showcase__title">Soft Mint Sport Loop</h4>
+                </a>
+
+                <div class="showcase__price flex">
+                  <span class="new__price">XXX</span>
+                  <span class="old__price">XXX</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="showcase__item">
+              <a href="details.html" class="showcase__img-box">
+                <img
+                  src="/assets/img/Hot Releases/Sport band light blue.jpg" alt=""
+                  class="showcase__img"
+                />
+              </a>
+
+              <div class="showcase__content">
+                <a href="details.html">
+                  <h4 class="showcase__title">Sport band Light Blue</h4>
+                </a>
+
+                <div class="showcase__price flex">
+                  <span class="new__price">XXX</span>
+                  <span class="old__price">XXX</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="showcase__wrapper">
+            <h3 class="section__title">High Deals</h3>
+
+            <div class="showcase__item">
+              <a href="details.html" class="showcase__img-box">
+                <img
+                  src="/assets/img/High Deals/Alpine Loop Indigo.jpg" alt=""
+                  class="showcase__img"
+                />
+              </a>
+
+              <div class="showcase__content">
+                <a href="details.html">
+                  <h4 class="showcase__title">Alpine Loop Indigo</h4>
+                </a>
+
+                <div class="showcase__price flex">
+                  <span class="new__price">XXX</span>
+                  <span class="old__price">XXX</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="showcase__item">
+              <a href="details.html" class="showcase__img-box">
+                <img
+                  src="/assets/img/High Deals/Hermes stour bridon navy.jpg" alt=""
+                  class="showcase__img"
+                />
+              </a>
+
+              <div class="showcase__content">
+                <a href="details.html">
+                  <h4 class="showcase__title">Hermes Stour Bridon Navy</h4>
+                </a>
+
+                <div class="showcase__price flex">
+                  <span class="new__price">XXX</span>
+                  <span class="old__price">XXX</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="showcase__item">
+              <a href="details.html" class="showcase__img-box">
+                <img
+                  src="/assets/img/High Deals/Modern Buckle Lavander.jpg" alt=""
+                  class="showcase__img"
+                />
+              </a>
+
+              <div class="showcase__content">
+                <a href="details.html">
+                  <h4 class="showcase__title">Modern Buckle Lavander</h4>
+                </a>
+
+                <div class="showcase__price flex">
+                  <span class="new__price">XXX</span>
+                  <span class="old__price">XXX</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="showcase__wrapper">
+            <h3 class="section__title">Top Selling</h3>
+
+            <div class="showcase__item">
+              <a href="details.html" class="showcase__img-box">
+                <img
+                  src="/assets/img/Top Selling/Gold Milanese.jpg" alt=""
+                  class="showcase__img"
+                />
+              </a>
+
+              <div class="showcase__content">
+                <a href="details.html">
+                  <h4 class="showcase__title">Gold Milanese</h4>
+                </a>
+
+                <div class="showcase__price flex">
+                  <span class="new__price">XXX</span>
+                  <span class="old__price">XXX</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="showcase__item">
+              <a href="details.html" class="showcase__img-box">
+                <img
+                  src="/assets/img/Top Selling/Graphite Milanese.jpg" alt=""
+                  class="showcase__img"
+                />
+              </a>
+
+              <div class="showcase__content">
+                <a href="details.html">
+                  <h4 class="showcase__title">Graphite Milanese</h4>
+                </a>
+
+                <div class="showcase__price flex">
+                  <span class="new__price">XXX</span>
+                  <span class="old__price">XXX</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="showcase__item">
+              <a href="details.html" class="showcase__img-box">
+                <img
+                  src="/assets/img/Top Selling/Silver Bracelet.jpg" alt=""
+                  class="showcase__img"
+                />
+              </a>
+
+              <div class="showcase__content">
+                <a href="details.html">
+                  <h4 class="showcase__title">Silver Bracelet</h4>
+                </a>
+
+                <div class="showcase__price flex">
+                  <span class="new__price">XXX</span>
+                  <span class="old__price">XXX</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="showcase__wrapper">
+            <h3 class="section__title">Trending</h3>
+
+            <div class="showcase__item">
+              <a href="details.html" class="showcase__img-box">
+                <img
+                  src="/assets/img/Trendy/Nike sport band.jpg" alt=""
+                  class="showcase__img"
+                />
+              </a>
+
+              <div class="showcase__content">
+                <a href="details.html">
+                  <h4 class="showcase__title">Nike Sport Band</h4>
+                </a>
+
+                <div class="showcase__price flex">
+                  <span class="new__price">XXX</span>
+                  <span class="old__price">XXX</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="showcase__item">
+              <a href="details.html" class="showcase__img-box">
+                <img
+                  src="/assets/img/Trendy/Nike sport loop game.jpg" alt=""
+                  class="showcase__img"
+                />
+              </a>
+
+              <div class="showcase__content">
+                <a href="details.html">
+                  <h4 class="showcase__title">Nike Sport Loop Game</h4>
+                </a>
+
+                <div class="showcase__price flex">
+                  <span class="new__price">XXX</span>
+                  <span class="old__price">XXX</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="showcase__item">
+              <a href="details.html" class="showcase__img-box">
+                <img
+                  src="/assets/img/Trendy/Ocean band blue.jpg" alt=""
+                  class="showcase__img"
+                />
+              </a>
+
+              <div class="showcase__content">
+                <a href="details.html">
+                  <h4 class="showcase__title">Ocean Band Blue</h4>
+                </a>
+
+                <div class="showcase__price flex">
+                  <span class="new__price">XXX</span>
+                  <span class="old__price">XXX</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!--=============== NEWSLETTER ===============-->
       <section class="newsletter"></section>
