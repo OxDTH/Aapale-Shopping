@@ -93,3 +93,20 @@ const tabs = document.querySelectorAll('[data-target]'),
       tab.classList.add('active-tab');
     });
   });
+
+  // Searching for a product called 'Macbook Air 13 inch' with Product code 'ASO1544STT'
+  document.querySelector('#searchButton').addEventListener('click', async () => {
+    const code = document.querySelector('#searchInput').value;
+
+    try {
+        // Make the API call to fetch product details
+        const response = await fetch(`http://localhost:5005/api/search?code=${code}`);
+        if (!response.ok) throw new Error('Product not found');
+
+        // If the product exists, redirect to its page
+        window.location.href = `macbookair13inch.html`;
+    } catch (error) {
+        // Show an error if the product is not found
+        alert('Product not found!');
+    }
+});
