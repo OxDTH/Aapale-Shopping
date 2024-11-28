@@ -9,8 +9,8 @@ app.use(express.json()); // Parse incoming JSON
 app.get('/api/search', (req, res) => {
     const { code } = req.query;
     const products = [
-        { name: 'Macbook Air', code: 'ASO1544STT', price: 100 },
-        { name: 'Product 2', code: 'P002', price: 200 },
+        { name: 'Macbook Air 13 inch', code: 'ASO1544STT', price: 100 },
+        { "name": "Macbook Pro 16 inch", "code": "ASO1544TTS", "price": 200 },
         // Add more products as needed
     ];
     const product = products.find((p) => p.code === code);

@@ -1,6 +1,6 @@
 [
-    { "name": "Macbook Air", "code": "ASO1544STT", "price": 100 },
-    { "name": "Product 2", "code": "P002", "price": 200 },
+    { "name": "Macbook Air 13 inch", "code": "ASO1544STT", "price": 100 },
+    { "name": "Macbook Pro 16 inch", "code": "ASO1544TTS", "price": 200 },
     { "name": "Product 3", "code": "P003", "price": 300 },
     { "name": "Product 4", "code": "P004", "price": 400 },
     { "name": "Product 5", "code": "P005", "price": 500 }
