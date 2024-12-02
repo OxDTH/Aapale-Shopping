@@ -72,69 +72,76 @@ var swiperProducts = new Swiper('.new__container', {
     },
 });
 
-/*=============== CountDown Timer ===============*/
+/*=============== COUNTDOWN TIMER ===============*/
 // Define target dates for each countdown timer
 const countdowns = [
   {
-      selector: '.deals__item:nth-child(1) .countdown', // First timer selector
-      targetDate: new Date('2025-07-19T23:59:59'), // Replace with your desired date
+    selector: '.deals__item:nth-child(1) .countdown', // First timer selector
+    targetDate: new Date('2025-07-19T23:59:59'), // Replace with your desired date
   },
   {
-      selector: '.deals__item:nth-child(2) .countdown', // Second timer selector
-      targetDate: new Date('2025-07-19T23:59:59'), // Replace with your desired date
+    selector: '.deals__item:nth-child(2) .countdown', // Second timer selector
+    targetDate: new Date('2025-07-19T23:59:59'), // Replace with your desired date
   },
 ];
 
-// Function to update a single countdown
-function updateCountdown(countdown) {
+// Function to update all countdowns
+function updateCountdowns() {
   const now = new Date();
-  const timeRemaining = countdown.targetDate - now;
 
-  if (timeRemaining <= 0) {
-      // If the countdown is over, set all values to zero
-      document.querySelector(countdown.selector).innerHTML = `
-          <div class="countdowm__amount">
-              <p class="countdown__period">0</p><span class="unit">Days</span>
-          </div>
-          <div class="countdowm__amount">
-              <p class="countdown__period">0</p><span class="unit">Hours</span>
-          </div>
-          <div class="countdowm__amount">
-              <p class="countdown__period">0</p><span class="unit">Mins</span>
-          </div>
-          <div class="countdowm__amount">
-              <p class="countdown__period">0</p><span class="unit">Sec</span>
-          </div>
-      `;
-      return;
-  }
-
-  // Calculate time components
-  const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
-
-  // Update the countdown elements in the DOM
-  const countdownEl = document.querySelector(countdown.selector);
-  countdownEl.querySelectorAll('.countdown__period')[0].textContent = days;
-  countdownEl.querySelectorAll('.countdown__period')[1].textContent = hours;
-  countdownEl.querySelectorAll('.countdown__period')[2].textContent = minutes;
-  countdownEl.querySelectorAll('.countdown__period')[3].textContent = seconds;
-}
-
-// Function to start all countdown timers
-function startCountdowns() {
   countdowns.forEach((countdown) => {
-      // Call the updateCountdown function every second
-      setInterval(() => updateCountdown(countdown), 1000);
-      // Initial call to set values immediately
-      updateCountdown(countdown);
+    const countdownEl = document.querySelector(countdown.selector);
+    if (!countdownEl) return; // Skip if the element doesn't exist
+
+    const timeRemaining = countdown.targetDate - now;
+
+    if (timeRemaining <= 0) {
+      // If the countdown is over, set all values to zero
+      countdownEl.innerHTML = `
+        <div class="countdown__amount">
+          <p class="countdown__period">0</p><span class="unit">Days</span>
+        </div>
+        <div class="countdown__amount">
+          <p class="countdown__period">0</p><span class="unit">Hours</span>
+        </div>
+        <div class="countdown__amount">
+          <p class="countdown__period">0</p><span class="unit">Mins</span>
+        </div>
+        <div class="countdown__amount">
+          <p class="countdown__period">0</p><span class="unit">Secs</span>
+        </div>`;
+      return;
+    }
+
+    // Calculate time components
+    const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+    // Update the countdown elements in the DOM
+    countdownEl.innerHTML = `
+      <div class="countdown__amount">
+        <p class="countdown__period">${days}</p><span class="unit">Days</span>
+      </div>
+      <div class="countdown__amount">
+        <p class="countdown__period">${hours}</p><span class="unit">Hours</span>
+      </div>
+      <div class="countdown__amount">
+        <p class="countdown__period">${minutes}</p><span class="unit">Mins</span>
+      </div>
+      <div class="countdown__amount">
+        <p class="countdown__period">${seconds}</p><span class="unit">Secs</span>
+      </div>`;
   });
 }
 
-// Start all countdowns
-startCountdowns();
+// Start a single interval for all countdowns
+setInterval(updateCountdowns, 1000);
+
+// Initial update to set values immediately
+updateCountdowns();
+
 
 
 
