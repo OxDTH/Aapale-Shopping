@@ -197,7 +197,8 @@ async function handleSearch() {
     ASO1X87LK6TZ: 'trackpad.html',
     ASO4ML93QR5N: 'USB-C to MagSafe 3 Cable.html',
     ASO8Z7YW2KL9: 'USB-C-PowerAdapter.html',
-    ASO3JK29M8Z7: 'Yellow Braided Loop.html'
+    ASO3JK29M8Z7: 'Yellow Braided Loop.html',
+    ASO56XY1T4P9: 'Vision Pro.html'
     // Add more mappings here as needed
   };
 
@@ -261,7 +262,8 @@ const products = [
   { name: "trackpad", code: "ASO1X87LK6TZ", page: "trackpad.html", image: "/assets/img/Products/Product 9/Magic Trackpad Black.png" },
   { name: "USB-C to MagSafe 3 Cable", code: "ASO4ML93QR5N", page: "USB-C to MagSafe 3 Cable.html", image: "/assets/img/Products/Product 13/USB-C to MagSafe 3 Cable (2 m) - Space Black.png" },
   { name: "USB-C-PowerAdapter", code: "ASO8Z7YW2KL9", page: "USB-C-PowerAdapter.html", image: "/assets/img/Products/Product 10/35W Dual USB-C Port Compact Power Adapter.png" },
-  { name: "Yellow Braided Loop", code: "ASO3JK29M8Z7", page: "Yellow Braided Loop.html", image: "/assets/img/Hot Releases/Braided Loop Sunshine unity.jpg" }
+  { name: "Yellow Braided Loop", code: "ASO3JK29M8Z7", page: "Yellow Braided Loop.html", image: "/assets/img/Hot Releases/Braided Loop Sunshine unity.jpg" },
+  { name: "Vision Pro", code: "ASO56XY1T4P9", page: "Vision Pro.html", image: "assets/img/New Arrivals/Apple-WWDC23-Vision-Pro-glass-230605_big.jpg.large.jpg" },
 
 ];
 
