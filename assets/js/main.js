@@ -72,6 +72,71 @@ var swiperProducts = new Swiper('.new__container', {
     },
 });
 
+/*=============== CountDown Timer ===============*/
+// Define target dates for each countdown timer
+const countdowns = [
+  {
+      selector: '.deals__item:nth-child(1) .countdown', // First timer selector
+      targetDate: new Date('2025-07-19T23:59:59'), // Replace with your desired date
+  },
+  {
+      selector: '.deals__item:nth-child(2) .countdown', // Second timer selector
+      targetDate: new Date('2025-07-19T23:59:59'), // Replace with your desired date
+  },
+];
+
+// Function to update a single countdown
+function updateCountdown(countdown) {
+  const now = new Date();
+  const timeRemaining = countdown.targetDate - now;
+
+  if (timeRemaining <= 0) {
+      // If the countdown is over, set all values to zero
+      document.querySelector(countdown.selector).innerHTML = `
+          <div class="countdowm__amount">
+              <p class="countdown__period">0</p><span class="unit">Days</span>
+          </div>
+          <div class="countdowm__amount">
+              <p class="countdown__period">0</p><span class="unit">Hours</span>
+          </div>
+          <div class="countdowm__amount">
+              <p class="countdown__period">0</p><span class="unit">Mins</span>
+          </div>
+          <div class="countdowm__amount">
+              <p class="countdown__period">0</p><span class="unit">Sec</span>
+          </div>
+      `;
+      return;
+  }
+
+  // Calculate time components
+  const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+  // Update the countdown elements in the DOM
+  const countdownEl = document.querySelector(countdown.selector);
+  countdownEl.querySelectorAll('.countdown__period')[0].textContent = days;
+  countdownEl.querySelectorAll('.countdown__period')[1].textContent = hours;
+  countdownEl.querySelectorAll('.countdown__period')[2].textContent = minutes;
+  countdownEl.querySelectorAll('.countdown__period')[3].textContent = seconds;
+}
+
+// Function to start all countdown timers
+function startCountdowns() {
+  countdowns.forEach((countdown) => {
+      // Call the updateCountdown function every second
+      setInterval(() => updateCountdown(countdown), 1000);
+      // Initial call to set values immediately
+      updateCountdown(countdown);
+  });
+}
+
+// Start all countdowns
+startCountdowns();
+
+
 
 /*=============== PRODUCTS TABS ===============*/
 const tabs = document.querySelectorAll('[data-target]'),
@@ -161,3 +226,113 @@ document.querySelector('#searchInput').addEventListener('keydown', (e) => {
   }
 });
 
+// This code is for suggestion box search results image and products with code.
+// Product data
+const products = [
+  { name: "Macbook Air 13 inch", code: "ASO1544STT", page: "macbookair13inch.html", image: "/assets/img/Shop (category)/Macbook Air 13 inch M3 chip Midnight Product 1.png" },
+  { name: "Macbook Pro 16 inch", code: "ASO1544TTS", page: "macbookpro16inch.html", image: "/assets/img/Shop (category)/Macbook Pro 16-inch (M3 Max chip) Product 2.png" },
+  { name: "imac", code: "ASO4X92TPQ", page: "imac.html", image: "/assets/img/Shop (category)/imac 24 blue selection m3 chip Product 3.png" },
+  { name: "Mac mini", code: "ASO87KJ29L", page: "macmini.html", image: "/assets/img/Shop (category)/Mac mini M2 Pro Product 4.png" },
+  { name: "Mac studio", code: "ASO93MXY1Z", page: "macstudio.html", image: "/assets/img/Shop (category)/Mac studio M2 Ultra Product 5.png" },
+  { name: "Mac Pro", code: "ASO5ZP4L8Q", page: "macpro.html", image: "/assets/img/Shop (category)/Mac Pro M2 Ultra Product 6.png" },
+  { name: "Pro Display", code: "ASO12JK8W3", page: "prodisplay.html", image: "/assets/img/Products/Product 7/Pro display landscape.png" },
+  { name: "Magic Mouse", code: "ASO9PXY72ML3Q", page: "magicmouse.html", image: "assets/img/Products/Product 8/Magic Mouse.png" },
+  { name: "Aapale Watch Series 9", code: "ASO1B6P9QR", page: "Aapale Watch Series 9.html", image: "/assets/img/New Arrivals/Apple Watch Series 9.jpg" },
+  { name: "Aapale Watch Ultra 2", code: "ASO72LK56M", page: "Aapale Watch Ultra 2.html", image: "/assets/img/New Arrivals/Apple Watch Ultra 2.jpg" },
+  { name: "Airtag", code: "ASO3XZ90PQ", page: "airtag.html", image: "/assets/img/Deals/AirTag transparent.png" },
+  { name: "Alpine Loop Indigo", code: "ASO6YZ4JN1", page: "Alpine Loop Indigo.html", image: "/assets/img/High Deals/Alpine Loop Indigo.jpg" },
+  { name: "Gold Milanese", code: "ASO92MLX87", page: "Gold Milanese.html", image: "/assets/img/Top Selling/Gold Milanese.jpg" },
+  { name: "Graphite Milanese", code: "ASO4JK29TR", page: "Graphite Milanese.html", image: "/assets/img/Top Selling/Graphite Milanese.jpg" },
+  { name: "Hermes Stour Bridon", code: "ASO59QP4YW", page: "Hermes Stour Bridon.html", image: "/assets/img/High Deals/Hermes stour bridon navy.jpg" },
+  { name: "Homepod Mini", code: "ASO1X8MZ72", page: "Homepod Mini.html", image: "/assets/img/Product Details/Product 11/HomePod mini.png" },
+  { name: "Homepod", code: "ASO3P9KL56", page: "Homepod.html", image: "assets/img/Product Details/Product 12/HomePod.png" },
+  { name: "ipad Pro", code: "ASO87YW1XZ", page: "ipad Pro.html", image: "/assets/img/New Arrivals/ipad-pro-storage-select-202405-13inch-spaceblack-matte-wificell.jpg" },
+  { name: "iPhone 15 Pro", code: "ASO92T4JK8", page: "iPhone 15 Pro.html", image: "/assets/img/New Arrivals/iphone-15-pro-finish-select-202309-6-7inch-bluetitanium.png" },
+  { name: "iPhone 16 Plus", code: "ASO6XY5MZ9", page: "iPhone 16 Plus.html", image: "/assets/img/New Arrivals/Apple-iPhone-16-Plus.jpg" },
+  { name: "Laptop Sleeve", code: "ASO7JN1P4LK", page: "Laptop Sleeve.html", image: "/assets/img/New Arrivals/laptop Sleeve.jpg" },
+  { name: "Magic keyboard", code: "ASO93QR8Z57", page: "Magic keyboard.html", image: "/assets/img/Deals/Magic Keyboard.png" },
+  { name: "Modern Buckle Lavander", code: "ASO1XZ92YW", page: "Modern Buckle Lavander.html", image: "/assets/img/High Deals/Modern Buckle Lavander.jpg" },
+  { name: "Nike Sport Band", code: "ASO4JK72T9M", page: "Nike Sport Band.html", image: "/assets/img/Trendy/Nike sport band.jpg" },
+  { name: "Nike Sport Loop Game", code: "ASO8P5XY6QR", page: "Nike Sport Loop Game.html", image: "/assets/img/Trendy/Nike sport loop game.jpg" },
+  { name: "Ocean Band Blue", code: "ASO9Z3KL87W", page: "Ocean Band Blue.html", image: "/assets/img/Trendy/Ocean band blue.jpg" },
+  { name: "Silver Bracelet", code: "ASO56ML1X8T", page: "Silver Bracelet.html", image: "/assets/img/Top Selling/Silver Bracelet.jpg" },
+  { name: "Soft Mint Sport Loop", code: "ASO92YW4JK29", page: "Soft Mint Sport Loop.html", image: "/assets/img/Hot Releases/Soft mint Sport loop bg.jpg" },
+  { name: "Sport Band Light Blue", code: "ASO3Z9PXY57Q", page: "Sport Band Light Blue.html", image: "/assets/img/Hot Releases/Sport band light blue.jpg" },
+  { name: "trackpad", code: "ASO1X87LK6TZ", page: "trackpad.html", image: "/assets/img/Products/Product 9/Magic Trackpad Black.png" },
+  { name: "USB-C to MagSafe 3 Cable", code: "ASO4ML93QR5N", page: "USB-C to MagSafe 3 Cable.html", image: "/assets/img/Products/Product 13/USB-C to MagSafe 3 Cable (2 m) - Space Black.png" },
+  { name: "USB-C-PowerAdapter", code: "ASO8Z7YW2KL9", page: "USB-C-PowerAdapter.html", image: "/assets/img/Products/Product 10/35W Dual USB-C Port Compact Power Adapter.png" },
+  { name: "Yellow Braided Loop", code: "ASO3JK29M8Z7", page: "Yellow Braided Loop.html", image: "/assets/img/Hot Releases/Braided Loop Sunshine unity.jpg" }
+
+];
+
+// Reference to HTML elements
+const searchInput = document.querySelector('#searchInput');
+const suggestionsContainer = document.createElement('div');
+suggestionsContainer.id = 'suggestionsBox';
+searchInput.parentNode.insertBefore(suggestionsContainer, searchInput.nextSibling);
+
+// Event listener for typing in search bar
+searchInput.addEventListener('input', () => {
+  const query = searchInput.value.toLowerCase().trim();
+
+  if (query.length < 4) {
+      clearSuggestions();
+      return;
+  }
+
+  const matches = products.filter(product => 
+      product.name.toLowerCase().includes(query) || 
+      product.code.toLowerCase().startsWith(query)
+  );
+
+  renderSuggestions(matches);
+});
+
+// Render suggestions
+function renderSuggestions(matches) {
+  clearSuggestions();
+
+  if (matches.length === 0) {
+      const noResult = document.createElement('div');
+      noResult.className = 'suggestion-item';
+      noResult.textContent = 'No products found';
+      suggestionsContainer.appendChild(noResult);
+      return;
+  }
+
+  matches.forEach(product => {
+      const suggestionItem = document.createElement('div');
+      suggestionItem.className = 'suggestion-item';
+      suggestionItem.innerHTML = `
+          <img src="${product.image}" alt="${product.name}" class="suggestion-image">
+          <span class="suggestion-name">${product.name} (${product.code})</span>
+      `;
+
+      suggestionItem.addEventListener('click', () => {
+          window.location.href = product.page; // Redirect to product page
+      });
+
+      suggestionsContainer.appendChild(suggestionItem);
+  });
+}
+
+// Clear suggestions
+function clearSuggestions() {
+  suggestionsContainer.innerHTML = '';
+}
+
+// Event listener for Enter key
+searchInput.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+      const query = searchInput.value.toLowerCase().trim();
+      const product = products.find(product => 
+          product.name.toLowerCase() === query || 
+          product.code.toLowerCase() === query
+      );
+      if (product) {
+          window.location.href = product.page; // Redirect to product page on exact match
+      } else {
+          alert('Product not found!');
+      }
+  }
+});
