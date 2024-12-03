@@ -3,7 +3,7 @@
 ## Project Setup:
 
 ```bash
-$ git clone
+$ git clone https://github.com/OxDTH/Aapale-Shopping.git
 ```
 ## Head Over to Project Backend Directory by:
 
