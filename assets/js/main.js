@@ -1,4 +1,13 @@
 /*=============== SHOW MENU ===============*/
+// SpeedInsights API monitoring for vercel
+import { SpeedInsights } from "@vercel/speed-insights/next";
+
+export default function handler(req, res) {
+  SpeedInsights.track("API Monitor"); // Track performance
+  res.status(200).json({ message: "API performance is being monitored!" });
+}
+
+// SpeedInsights API monitoring for vercel ending
 
 /*===== Menu Show =====*/
 /* Validate if constant exists */
