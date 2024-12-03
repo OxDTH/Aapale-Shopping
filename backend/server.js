@@ -11,6 +11,7 @@ app.get('/api/search', (req, res) => {
     const products = [
         { name: 'Macbook Air 13 inch', code: 'ASO1544STT' },
         { name: 'Macbook Pro 16 inch', code: 'ASO1544TTS' },
+        { name: 'imac', code: 'ASO4X92TPQ' },
         { name: 'Vision Pro', code: 'ASO56XY1T4P9' },
         { name: 'Mac mini', code: 'ASO87KJ29L' },
         { name: 'Mac studio', code: 'ASO93MXY1Z' },
