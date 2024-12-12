@@ -84,12 +84,12 @@
           <div class="header__user-actions">
             <a href="wishlist.html" class="header__action-btn" title="wishlist">
               <img src="/assets/img/icon-heart.svg" alt="" loading="lazy">
-              <span class="count">3</span>
+              <span class="count"></span>
             </a>
   
             <a href="cart.html" class="header__action-btn" title="cart">
               <img src="/assets/img/icon-cart.svg" alt="" loading="lazy">
-              <span class="count">3</span>
+              <span class="count"></span>
             </a>
           </div>
         </nav>
@@ -137,9 +137,9 @@
             <h3 class="details__title">Mac Pro</h3>
 
             <div class="details__price flex">
-              <span class="new__price">$XXX</span>
-              <span class="old__price">$XXX</span>
-              <span class="save__price">2% Off</span>
+              <span class="new__price">₹583,919.20</span>
+              <span class="old__price">₹729,899</span>
+              <span class="save__price">20% Off</span>
             </div>
 
             <p class="short__description">
@@ -213,7 +213,17 @@
             <div class="details__action">
               <input type="number" class="quantity" value="1">
 
-              <a href="#" class="btn btn--sm">Add to Cart</a>
+              <a 
+                href="#" 
+                class="btn btn--sm" 
+                aria-label="Add To Cart"
+                data-id="Mac Pro product page"
+                data-name="Mac Pro"
+                data-price="583919.20" 
+                data-image="/assets/img/Products/Product 6/Mac Pro M2 Ultra.png"
+              >
+                <i class="ri-shopping-cart-2-line"></i>
+              </a>
 
               <a href="#" class="details__action-btn">
                 <i class="ri-heart-3-line"></i>

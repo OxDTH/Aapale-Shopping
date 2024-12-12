@@ -264,7 +264,7 @@ padding-block: 0.875rem;
   width: 20px;
 }
 
-.header__action-btn .count {
+/* .header__action-btn .count {
   position: absolute;
   top: -0.625rem;
   right: -0.625rem;
@@ -276,7 +276,7 @@ padding-block: 0.875rem;
   border-radius: 50%;
   text-align: center;
   font-size: var(--tiny-font-size);
-}
+} */
 
 /* Active link */
 .active-link,
