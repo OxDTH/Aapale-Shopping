@@ -420,3 +420,131 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+// Function to display the Wishlist items Starts Here
+document.addEventListener("DOMContentLoaded", () => {
+  const wishlistSection = document.querySelector("#wishlist-section");
+
+  // Render Wishlist
+  function renderWishlist() {
+    const wishlist = JSON.parse(localStorage.getItem("wishlist")) || []; // Retrieve latest wishlist
+    wishlistSection.innerHTML = ""; // Clear existing items
+
+    if (wishlist.length === 0) {
+      wishlistSection.innerHTML = `
+        <tr>
+          <td colspan="5" class="table__empty">
+            Your wishlist is empty.
+          </td>
+        </tr>
+      `;
+      return;
+    }
+
+    wishlist.forEach((product, index) => {
+      const row = `
+        <tr>
+          <td>
+            <img 
+              src="${product.image}" 
+              alt="${product.name}" 
+              class="table__img"
+              loading="lazy"
+            />
+          </td>
+          <td>
+            <h3 class="table__title">${product.name}</h3>
+          </td>
+          <td><span class="table__price">&#8377;${product.price.toFixed(2)}</span></td>
+          <td>
+            <button class="remove-wishlist-btn" data-index="${index}">
+              <i class="ri-delete-bin-line"></i>
+            </button>      </td>
+          <td>
+            <button class="add-to-cart-btn btn" data-index="${index}">
+              Add to Cart
+            </button>      </td>
+        </tr>
+      `;
+    wishlistSection.innerHTML += row;
+  });
+}
+
+  // Add to Wishlist
+  document.body.addEventListener("click", (e) => {
+    if (e.target.closest(".wishlist__btn")) {
+      e.preventDefault();
+
+      // Retrieve the latest wishlist data
+      const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+      const button = e.target.closest(".wishlist__btn");
+
+      const product = {
+        id: button.getAttribute("data-id"),
+        name: button.getAttribute("data-name"),
+        price: parseFloat(button.getAttribute("data-price")),
+        image: button.getAttribute("data-image"),
+      };
+
+      // Check if the product is already in the wishlist
+      const isAlreadyInWishlist = wishlist.some((item) => item.id === product.id);
+
+      if (!isAlreadyInWishlist) {
+        wishlist.push(product);
+        localStorage.setItem("wishlist", JSON.stringify(wishlist));
+        renderWishlist(); // Re-render wishlist to reflect the new data
+        setTimeout(() => {
+          alert(`${product.name} has been added to your wishlist.`);
+        }, 100); // Delay to ensure data is saved before alert
+      } else {
+        setTimeout(() => {
+          alert(`${product.name} is already in your wishlist.`);
+        }, 100);
+      }
+    }
+  });
+
+  // Add to Cart Functionality
+  wishlistSection.addEventListener("click", (e) => {
+    if (e.target.closest(".add-to-cart-btn")) {
+      const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+      const index = e.target.closest(".add-to-cart-btn").getAttribute("data-index");
+      const product = wishlist[index];
+
+      // Check if the product is already in the cart
+      const isAlreadyInCart = cart.some((item) => item.id === product.id);
+
+      if (!isAlreadyInCart) {
+        cart.push({ ...product, quantity: 1 }); // Add product with quantity 1
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        // Remove the product from the wishlist
+        wishlist.splice(index, 1);
+        localStorage.setItem("wishlist", JSON.stringify(wishlist));
+
+        renderWishlist(); // Re-render the wishlist
+        alert(`${product.name} has been added to your cart.`);
+      } else {
+        alert(`${product.name} is already in your cart.`);
+      }
+    }
+  });
+
+  // Remove from Wishlist
+  wishlistSection.addEventListener("click", (e) => {
+    if (e.target.closest(".remove-wishlist-btn")) {
+      // Retrieve the latest wishlist data
+      const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+      const index = e.target.closest(".remove-wishlist-btn").getAttribute("data-index");
+
+      wishlist.splice(index, 1); // Remove item from wishlist
+      localStorage.setItem("wishlist", JSON.stringify(wishlist));
+      renderWishlist(); // Re-render wishlist to show updated data
+    }
+  });
+
+  // Initial Render
+  renderWishlist();
+});
