@@ -220,7 +220,7 @@ async function handleSearch() {
       }
   } catch (error) {
       // Show an error if the product is not found
-      alert(error.message);
+      showNotification(error.message);
   }
 }
 
@@ -341,7 +341,7 @@ searchInput.addEventListener('keypress', (e) => {
       if (product) {
           window.location.href = product.page; // Redirect to product page on exact match
       } else {
-          alert('Product not found!');
+        showNotification('Product not found!');
       }
   }
 });
@@ -379,7 +379,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Save updated cart back to localStorage
       localStorage.setItem("cart", JSON.stringify(cart));
 
-      alert(`${product.name} has been added to the cart!`);
+      showNotification(`${product.name} has been added to the cart!`);
     });
   });
 });
@@ -416,7 +416,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Save updated cart back to localStorage
       localStorage.setItem("cart", JSON.stringify(cart));
 
-      alert(`${product.name} has been added to the cart!`);
+      showNotification(`${product.name} has been added to the cart!`);
     });
   });
 });
@@ -494,11 +494,11 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem("wishlist", JSON.stringify(wishlist));
         renderWishlist(); // Re-render wishlist to reflect the new data
         setTimeout(() => {
-          alert(`${product.name} has been added to your wishlist.`);
+          showNotification(`${product.name} has been added to your wishlist.`);
         }, 100); // Delay to ensure data is saved before alert
       } else {
         setTimeout(() => {
-          alert(`${product.name} is already in your wishlist.`);
+          showNotification(`${product.name} is already in your wishlist.`);
         }, 100);
       }
     }
@@ -525,9 +525,9 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem("wishlist", JSON.stringify(wishlist));
 
         renderWishlist(); // Re-render the wishlist
-        alert(`${product.name} has been added to your cart.`);
+        showNotification(`${product.name} has been added to your cart.`);
       } else {
-        alert(`${product.name} is already in your cart.`);
+        showNotification(`${product.name} is already in your cart.`);
       }
     }
   });
@@ -548,3 +548,29 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initial Render
   renderWishlist();
 });
+
+// Function to display the Notification Starts Here
+function showNotification(message, type = "success") {
+  const container = document.getElementById("notification-container");
+
+  // Create a notification element
+  const notification = document.createElement("div");
+  notification.className = `notification ${type}`;
+  notification.innerText = message;
+
+  // Append the notification to the container
+  container.appendChild(notification);
+
+  // Add the "show" class to trigger animations
+  setTimeout(() => {
+    notification.classList.add("show");
+  }, 10);
+
+  // Remove the notification after 5 seconds
+  setTimeout(() => {
+    notification.classList.remove("show");
+    setTimeout(() => {
+      notification.remove();
+    }, 500);
+  }, 3000);
+}
